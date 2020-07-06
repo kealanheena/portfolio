@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/kealanheena/portfolio#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21"
   },
   "devDependencies": {
     "jest": "^26.1.0"
