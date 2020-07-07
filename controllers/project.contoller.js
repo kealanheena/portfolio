@@ -1,5 +1,5 @@
 const ProjectModel = require("../model/project.model");
 
-exports.createProject = () => {
-  ProjectModel.create();
+exports.createProject = (req, res, next) => {
+  ProjectModel.create(req.body);
 };
