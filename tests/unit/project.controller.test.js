@@ -16,23 +16,34 @@ describe("ProjectController", () => {
   });
 
   describe(".createProject", () => {
+
+    beforeEach(() => {
+      req.body = newProject;
+      req.body = newProject;
+    });
+
     it("should have a createProject function", () => {
       expect(typeof ProjectController.createProject).toBe("function");
     });
 
     it("should call ProjectModel.create", () => {
-      req.body = newProject;
       ProjectController.createProject(req, res, next);
 
       expect(ProjectModel.create).toBeCalledWith(newProject);
     });
 
     it("should return a 201 response code", () => {
-      req.body = newProject;
       ProjectController.createProject(req, res, next);
 
       expect(res.statusCode).toBe(201);
       expect(res._isEndCalled()).toBeTruthy()
-    })
+    });
+
+    it("should return json body in response", () => {
+      ProjectModel.create.mockReturnValue(newProject);
+      ProjectController.createProject(req, res, next);
+
+      expect(res._getJSONData()).toStrictEqual(newProject);
+    });
   });
 })
