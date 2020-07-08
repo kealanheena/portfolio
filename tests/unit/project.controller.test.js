@@ -12,7 +12,7 @@ describe("ProjectController", () => {
   beforeEach(() => {
     req = httpMocks.createRequest();
     res = httpMocks.createResponse();
-    next = null;
+    next = jest.fn();
   });
 
   describe(".createProject", () => {
@@ -45,5 +45,14 @@ describe("ProjectController", () => {
 
       expect(res._getJSONData()).toStrictEqual(newProject);
     });
+
+    it("should handle errors", async () => {
+      const errorMessage = { message: "Done property missing"};
+      const rejectedPromise = Promise.reject(errorMessage);
+      ProjectModel.create.mockReturnValue(rejectedPromise);
+      await ProjectController.createProject(req, res, next);
+
+      expect(next).toBeCalledWith(errorMessage);
+    })
   });
 });
