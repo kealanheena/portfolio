@@ -20,8 +20,15 @@ describe(endpointUrl, () => {
   it("should return error 500 on malformed data with POST", async () => {
     const response = await request(app)
       .post(endpointUrl)
-      .send({ title: "Missing Required Inputs"});
-      
+      .send({
+        title: "Missing Required Inputs",
+        description: "This is an invalid project"
+      });
+
     expect(response.statusCode).toBe(500);
+    expect(response.body).toStrictEqual({
+      message: 
+        "Project validation failed: github: Path `github` is required."
+    })
   });
 });
