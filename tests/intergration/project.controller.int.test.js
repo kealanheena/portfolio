@@ -16,4 +16,12 @@ describe(endpointUrl, () => {
     expect(response.body.website).toBe(newProject.website);
     expect(response.body.github).toBe(newProject.github);
   });
+
+  it("should return error 500 on malformed data with POST", async () => {
+    const response = await request(app)
+      .post(endpointUrl)
+      .send({ title: "Missing Required Inputs"});
+      
+    expect(response.statusCode).toBe(500);
+  });
 });
