@@ -15,8 +15,4 @@ app.get("/", (req, res) => {
   res.json("hello world");
 });
 
-// app.listen(PORT, () => {
-//   console.log(`server is listening on port ${PORT}`);
-// });
-
 module.exports = app;
