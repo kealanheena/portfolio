@@ -32,18 +32,18 @@ describe("ProjectController", () => {
       expect(ProjectModel.create).toBeCalledWith(newProject);
     });
 
-    it("should return a 201 response code", () => {
-      ProjectController.createProject(req, res, next);
+    it("should return a 201 response code", async () => {
+      await ProjectController.createProject(req, res, next);
 
       expect(res.statusCode).toBe(201);
       expect(res._isEndCalled()).toBeTruthy()
     });
 
-    it("should return json body in response", () => {
+    it("should return json body in response", async () => {
       ProjectModel.create.mockReturnValue(newProject);
-      ProjectController.createProject(req, res, next);
+      await ProjectController.createProject(req, res, next);
 
       expect(res._getJSONData()).toStrictEqual(newProject);
     });
   });
-})
+});
