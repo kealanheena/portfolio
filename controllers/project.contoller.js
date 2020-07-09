@@ -8,3 +8,7 @@ exports.createProject = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.getProjects = async (req, res, next) => {
+
+}

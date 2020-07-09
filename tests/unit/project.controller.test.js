@@ -15,6 +15,13 @@ describe("ProjectController", () => {
     next = jest.fn();
   });
 
+  describe(".getProjects", () => {
+
+    it("should have a getTodos function", () => {
+      expect(typeof ProjectController.getProjects).toBe("function");
+    });
+  });
+
   describe(".createProject", () => {
 
     beforeEach(() => {
