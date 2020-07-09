@@ -2,6 +2,7 @@ const ProjectController = require("../../controllers/project.contoller");
 const ProjectModel = require("../../model/project.model");
 const httpMocks = require("node-mocks-http");
 const newProject = require("../mock-data/new-project.json");
+const allProjects = require("../mock-data/new-project.json");
 
 ProjectModel.create = jest.fn();
 ProjectModel.find = jest.fn();
@@ -33,6 +34,13 @@ describe("ProjectController", () => {
 
       expect(res.statusCode).toBe(200);
       expect(res._isEndCalled()).toBeTruthy();
+    });
+
+    it("should return json body in response", async () => {
+      ProjectModel.find.mockReturnValue(allProjects);
+      await ProjectController.getProjects(req, res, next);
+
+      expect(res._getJSONData()).toStrictEqual(allProjects);
     });
   });
 
