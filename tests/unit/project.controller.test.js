@@ -4,6 +4,7 @@ const httpMocks = require("node-mocks-http");
 const newProject = require("../mock-data/new-project.json");
 
 ProjectModel.create = jest.fn();
+ProjectModel.find = jest.fn();
 
 describe("ProjectController", () => {
 
@@ -19,6 +20,12 @@ describe("ProjectController", () => {
 
     it("should have a getTodos function", () => {
       expect(typeof ProjectController.getProjects).toBe("function");
+    });
+
+    it("should call ProjectModel.find({})", () => {
+      ProjectController.getProjects(req, res, next);
+
+      expect(ProjectModel.find).toBeCalledWith({})
     });
   });
 

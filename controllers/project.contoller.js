@@ -10,5 +10,5 @@ exports.createProject = async (req, res, next) => {
 };
 
 exports.getProjects = async (req, res, next) => {
-
+  ProjectModel.find({});
 }
