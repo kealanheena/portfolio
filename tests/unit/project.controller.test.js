@@ -27,6 +27,13 @@ describe("ProjectController", () => {
 
       expect(ProjectModel.find).toBeCalledWith({})
     });
+
+    it("should return a 200 response code", async () => {
+      await ProjectController.getProjects(req, res, next);
+
+      expect(res.statusCode).toBe(200);
+      expect(res._isEndCalled()).toBeTruthy();
+    });
   });
 
   describe(".createProject", () => {
