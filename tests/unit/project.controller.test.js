@@ -6,10 +6,12 @@ const allProjects = require("../mock-data/new-project.json");
 
 ProjectModel.create = jest.fn();
 ProjectModel.find = jest.fn();
+ProjectModel.findById = jest.fn();
 
 describe("ProjectController", () => {
 
   let req, res, next;
+  let projectId = "5ef12ccfa293162e4204ce88";
 
   beforeEach(() => {
     req = httpMocks.createRequest();
@@ -22,7 +24,13 @@ describe("ProjectController", () => {
     it("should have a getProjectById function", () => {
       expect(typeof ProjectController.getProjectById).toBe("function");
     });
-    
+
+    it("should call ProjectModel.findById with route parameters", async () => {
+      req.params.id = projectId;
+      await ProjectController.getProjectById(req, res, next);
+
+      expect(ProjectModel.findById).toBeCalledWith(projectId);
+    });
   });
 
   describe(".getProjects", () => {
