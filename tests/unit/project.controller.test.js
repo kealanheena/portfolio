@@ -33,13 +33,14 @@ describe("ProjectController", () => {
     });
 
     it("should return a 200 response code", async () => {
+      ProjectModel.findById.mockReturnValue(newProject);
       await ProjectController.getProjectById(req, res, next);
 
       expect(res.statusCode).toBe(200);
       expect(res._isEndCalled()).toBeTruthy();
     });
 
-    it("should return a 200 response code", async () => {
+    it("should return a json body in response", async () => {
       ProjectModel.findById.mockReturnValue(newProject);
       await ProjectController.getProjectById(req, res, next);
 
@@ -53,6 +54,14 @@ describe("ProjectController", () => {
       await ProjectController.getProjectById(req, res, next);
 
       expect(next).toBeCalledWith(errorMessage);
+    });
+
+    it("should return a 404 status code when the project doesn't exsist", async () => {
+      ProjectModel.findById.mockReturnValue(null);
+      await ProjectController.getProjectById(req, res, next);
+
+      expect(res.statusCode).toBe(404);
+      expect(res._isEndCalled()).toBeTruthy();
     });
   });
 
