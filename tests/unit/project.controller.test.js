@@ -42,6 +42,15 @@ describe("ProjectController", () => {
 
       expect(res._getJSONData()).toStrictEqual(allProjects);
     });
+
+    it("should handle errors", async () => {
+      const errorMessage = { message: "Error finding projects" };
+      const rejectedPromise = Promise.reject(errorMessage);
+      ProjectModel.find.mockReturnValue(rejectedPromise);
+      await ProjectController.getProjects(req, res, next);
+
+      expect(next).toBeCalledWith(errorMessage);
+    });
   });
 
   describe(".createProject", () => {
@@ -76,7 +85,7 @@ describe("ProjectController", () => {
     });
 
     it("should handle errors", async () => {
-      const errorMessage = { message: "Done property missing"};
+      const errorMessage = { message: "Github property missing"};
       const rejectedPromise = Promise.reject(errorMessage);
       ProjectModel.create.mockReturnValue(rejectedPromise);
       await ProjectController.createProject(req, res, next);

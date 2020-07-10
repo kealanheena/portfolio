@@ -10,6 +10,10 @@ exports.createProject = async (req, res, next) => {
 };
 
 exports.getProjects = async (req, res, next) => {
-  const allProjects = await ProjectModel.find({});
-  res.status(200).json(allProjects);
+  try {
+    const allProjects = await ProjectModel.find({});
+    res.status(200).json(allProjects);
+  } catch (err) {
+    next(err);
+  }
 }
