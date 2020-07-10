@@ -31,6 +31,14 @@ describe("ProjectController", () => {
 
       expect(ProjectModel.findById).toBeCalledWith(projectId);
     });
+
+    it("should return a 200 response code", async () => {
+      ProjectModel.findById.mockReturnValue(newProject);
+      await ProjectController.getProjectById(req, res, next);
+
+      expect(res.statusCode).toBe(200);
+      expect(res._isEndCalled()).toBeTruthy();
+    });
   });
 
   describe(".getProjects", () => {

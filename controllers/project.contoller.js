@@ -19,5 +19,6 @@ exports.getProjects = async (req, res, next) => {
 };
 
 exports.getProjectById = async (req, res, next) => {
-  ProjectModel.findById(req.params.id);
+  const singleProject = ProjectModel.findById(req.params.id);
+  res.status(200).send();
 };
