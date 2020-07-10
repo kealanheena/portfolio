@@ -33,11 +33,17 @@ describe("ProjectController", () => {
     });
 
     it("should return a 200 response code", async () => {
-      ProjectModel.findById.mockReturnValue(newProject);
       await ProjectController.getProjectById(req, res, next);
 
       expect(res.statusCode).toBe(200);
       expect(res._isEndCalled()).toBeTruthy();
+    });
+
+    it("should return a 200 response code", async () => {
+      ProjectModel.findById.mockReturnValue(newProject);
+      await ProjectController.getProjectById(req, res, next);
+
+      expect(res._getJSONData()).toStrictEqual(newProject);
     });
   });
 
