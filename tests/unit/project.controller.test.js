@@ -17,9 +17,17 @@ describe("ProjectController", () => {
     next = jest.fn();
   });
 
+  describe(".getProjectById", () => {
+    
+    it("should have a getProjectById function", () => {
+      expect(typeof ProjectController.getProjectById).toBe("function");
+    });
+    
+  });
+
   describe(".getProjects", () => {
 
-    it("should have a getTodos function", () => {
+    it("should have a getProjects function", () => {
       expect(typeof ProjectController.getProjects).toBe("function");
     });
 

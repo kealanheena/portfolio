@@ -16,4 +16,8 @@ exports.getProjects = async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-}
+};
+
+exports.getProjectById = async (req, res, next) => {
+
+};
