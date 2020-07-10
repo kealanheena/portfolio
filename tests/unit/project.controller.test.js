@@ -26,7 +26,7 @@ describe("ProjectController", () => {
     it("should call ProjectModel.find({})", () => {
       ProjectController.getProjects(req, res, next);
 
-      expect(ProjectModel.find).toBeCalledWith({})
+      expect(ProjectModel.find).toBeCalledWith({});
     });
 
     it("should return a 200 response code", async () => {
