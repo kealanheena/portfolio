@@ -32,9 +32,9 @@ exports.getProjectById = async (req, res, next) => {
 };
 
 exports.updateProject = async (req, res, next) => {
-  await ProjectModel.findByIdAndUpdate(req.params.id, req.body, {
+  const updatedProject = await ProjectModel.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     useFindAndModify: false
   });
-  res.status(200).send();
+  res.status(200).json(updatedProject);
 }

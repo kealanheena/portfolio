@@ -46,6 +46,15 @@ describe("ProjectController", () => {
       expect(res._isEndCalled()).toBeTruthy();
       expect(res.statusCode).toBe(200);
     });
+
+    it("should return a json body in response", async () => {
+      req.params.id = projectId;
+      req.body = newProject;
+      ProjectModel.findByIdAndUpdate.mockReturnValue(newProject)
+      await ProjectController.updateProject(req, res, next);
+
+      expect(res._getJSONData()).toStrictEqual(newProject);
+    });
   });
 
   describe(".getProjectById", () => {
@@ -74,7 +83,6 @@ describe("ProjectController", () => {
       await ProjectController.getProjectById(req, res, next);
 
       expect(res._getJSONData()).toStrictEqual(newProject);
-      expect(res._isEndCalled()).toBeTruthy();
     });
 
     it("should handle errors", async () => {
@@ -119,7 +127,6 @@ describe("ProjectController", () => {
       await ProjectController.getProjects(req, res, next);
 
       expect(res._getJSONData()).toStrictEqual(allProjects);
-      expect(res._isEndCalled()).toBeTruthy();
     });
 
     it("should handle errors", async () => {
@@ -161,7 +168,6 @@ describe("ProjectController", () => {
       await ProjectController.createProject(req, res, next);
 
       expect(res._getJSONData()).toStrictEqual(newProject);
-      expect(res._isEndCalled()).toBeTruthy();
     });
 
     it("should handle errors", async () => {
