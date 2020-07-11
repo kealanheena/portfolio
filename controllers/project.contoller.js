@@ -24,7 +24,7 @@ exports.getProjectById = async (req, res, next) => {
     if (singleProject) {
       res.status(200).json(singleProject);
     } else {
-      res.status(404).send();
+      res.status(404).json("project not found");
     }
   } catch(err) {
     next(err);
@@ -37,7 +37,11 @@ exports.updateProject = async (req, res, next) => {
       new: true,
       useFindAndModify: false
     });
-    res.status(200).json(updatedProject);
+    if (updatedProject) {
+      res.status(200).json(updatedProject);
+    } else {
+      res.status(404).json("project not found");
+    }
   } catch (err) {
     next(err);
   }
