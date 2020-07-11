@@ -36,4 +36,5 @@ exports.updateProject = async (req, res, next) => {
     new: true,
     useFindAndModify: false
   });
+  res.status(200).send();
 }

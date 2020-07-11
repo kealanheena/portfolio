@@ -36,7 +36,18 @@ describe("ProjectController", () => {
         useFindAndModify: false
       });
     });
+
+    it("should return a 200 response code", async () => {
+      req.params.id = projectId;
+      req.body = newProject;
+      ProjectModel.findByIdAndUpdate.mockReturnValue(newProject)
+      await ProjectController.updateProject(req, res, next);
+
+      expect(res._isEndCalled()).toBeTruthy();
+      expect(res.statusCode).toBe(200);
+    });
   });
+
   describe(".getProjectById", () => {
     
     it("should have a getProjectById function", () => {
@@ -63,6 +74,7 @@ describe("ProjectController", () => {
       await ProjectController.getProjectById(req, res, next);
 
       expect(res._getJSONData()).toStrictEqual(newProject);
+      expect(res._isEndCalled()).toBeTruthy();
     });
 
     it("should handle errors", async () => {
@@ -107,6 +119,7 @@ describe("ProjectController", () => {
       await ProjectController.getProjects(req, res, next);
 
       expect(res._getJSONData()).toStrictEqual(allProjects);
+      expect(res._isEndCalled()).toBeTruthy();
     });
 
     it("should handle errors", async () => {
@@ -148,6 +161,7 @@ describe("ProjectController", () => {
       await ProjectController.createProject(req, res, next);
 
       expect(res._getJSONData()).toStrictEqual(newProject);
+      expect(res._isEndCalled()).toBeTruthy();
     });
 
     it("should handle errors", async () => {
