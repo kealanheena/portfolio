@@ -1,5 +1,5 @@
 const express = require("express");
-const projectRoutes = require("./routes/todo.routes")
+const projectRoutes = require("./routes/project.routes")
 const app = express();
 const mongodb = require("./mongodb/mongodb.connect");
 
