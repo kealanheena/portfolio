@@ -31,6 +31,9 @@ exports.getProjectById = async (req, res, next) => {
   }
 };
 
-exports.updateProject = async () => {
-
+exports.updateProject = async (req, res, next) => {
+  await ProjectModel.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    useFindAndModify: false
+  });
 }

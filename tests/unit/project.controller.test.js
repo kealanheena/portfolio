@@ -7,6 +7,7 @@ const allProjects = require("../mock-data/new-project.json");
 ProjectModel.create = jest.fn();
 ProjectModel.find = jest.fn();
 ProjectModel.findById = jest.fn();
+ProjectModel.findByIdAndUpdate = jest.fn();
 
 describe("ProjectController", () => {
 
@@ -23,6 +24,17 @@ describe("ProjectController", () => {
 
     it("should have an updateProject fuction", () => {
       expect(typeof ProjectController.updateProject).toBe("function");
+    });
+
+    it("should call ProjectModel.findByIdAndUpdate", async () => {
+      req.params.id = projectId;
+      req.body = newProject;
+      await ProjectController.updateProject(req, res, next);
+
+      expect(ProjectModel.findByIdAndUpdate).toBeCalledWith(projectId, newProject, {
+        new: true,
+        useFindAndModify: false
+      });
     });
   });
   describe(".getProjectById", () => {
