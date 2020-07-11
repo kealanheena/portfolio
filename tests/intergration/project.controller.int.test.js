@@ -3,6 +3,7 @@ const app = require("../../app");
 const newProject = require("../mock-data/new-project.json")
 
 const endpointUrl = "/projects/";
+const nonExistingProjectId = "5ef12ccfa293162e1111ce88"
 
 let firstProject;
 
@@ -64,6 +65,13 @@ describe(endpointUrl, () => {
       expect(response.body.description).toBe(newProject.description);
       expect(response.body.website).toBe(newProject.website);
       expect(response.body.github).toBe(newProject.github);
+    });
+
+    it("should should return a 404 error if the project doesn't exist", async () => {
+      const response = await request(app)
+        .get(endpointUrl + nonExistingProjectId);
+
+      expect(response.statusCode).toBe(404);
     });
   });
 });
