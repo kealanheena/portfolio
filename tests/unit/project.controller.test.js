@@ -19,6 +19,12 @@ describe("ProjectController", () => {
     next = jest.fn();
   });
 
+  describe(".updateProject", () => {
+
+    it("should have an updateProject fuction", () => {
+      expect(typeof ProjectController.updateProject).toBe("function");
+    });
+  });
   describe(".getProjectById", () => {
     
     it("should have a getProjectById function", () => {

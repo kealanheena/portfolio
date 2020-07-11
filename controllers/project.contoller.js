@@ -30,3 +30,7 @@ exports.getProjectById = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.updateProject = async () => {
+
+}
