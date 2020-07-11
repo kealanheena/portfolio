@@ -55,6 +55,15 @@ describe("ProjectController", () => {
 
       expect(res._getJSONData()).toStrictEqual(newProject);
     });
+
+    it("should handle errors", async () => {
+      const errorMessage = { message: "error" };
+      const rejectedPromise = Promise.reject(errorMessage);
+      ProjectModel.findByIdAndUpdate.mockReturnValue(rejectedPromise);
+      await ProjectController.updateProject(req, res, next);
+
+      expect(next).toBeCalledWith(errorMessage);
+    });
   });
 
   describe(".getProjectById", () => {

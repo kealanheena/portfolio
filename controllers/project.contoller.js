@@ -32,9 +32,13 @@ exports.getProjectById = async (req, res, next) => {
 };
 
 exports.updateProject = async (req, res, next) => {
-  const updatedProject = await ProjectModel.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    useFindAndModify: false
-  });
-  res.status(200).json(updatedProject);
+  try {
+    const updatedProject = await ProjectModel.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      useFindAndModify: false
+    });
+    res.status(200).json(updatedProject);
+  } catch (err) {
+    next(err);
+  }
 }
