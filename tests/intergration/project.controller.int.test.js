@@ -3,9 +3,11 @@ const app = require("../../app");
 const newProject = require("../mock-data/new-project.json")
 
 const endpointUrl = "/projects/";
+const testData = { title: "Make intergration test for put",
+                   description: "This test is updated" }
 const nonExistingProjectId = "5ef12ccfa293162e1111ce88"
 
-let firstProject;
+let firstProject, newProjectId;
 
 describe(endpointUrl, () => {
   describe(`POST Intergration Test`, () => {
@@ -20,6 +22,7 @@ describe(endpointUrl, () => {
       expect(response.body.website).toBe(newProject.website);
       expect(response.body.github).toBe(newProject.github);
 
+      newProjectId = response.body._id;
     });
   
     it("should return error 500 on malformed data with POST", async () => {
@@ -58,7 +61,7 @@ describe(endpointUrl, () => {
   describe("GET BY ID Intergration Tests", () => {
     test(`GET BY ID ${endpointUrl}`, async () => {
       const response = await request(app)
-        .get(endpointUrl + firstProject._id);
+        .get(endpointUrl + newProjectId);
 
       expect(response.statusCode).toBe(200);
       expect(response.body.title).toBe(newProject.title);
@@ -72,6 +75,19 @@ describe(endpointUrl, () => {
         .get(endpointUrl + nonExistingProjectId);
 
       expect(response.statusCode).toBe(404);
+    });
+  });
+
+
+  describe("PUT Intergration Tests", () => {
+    test(`PUT ${endpointUrl}`, async () => {
+      const response = await request(app)
+        .put(endpointUrl + newProjectId)
+        .send(testData);
+  
+      expect(response.statusCode).toBe(200);
+      expect(response.body.title).toBe(testData.title);
+      expect(response.body.description).toBe(testData.description);
     });
   });
 });
