@@ -89,5 +89,12 @@ describe(endpointUrl, () => {
       expect(response.body.title).toBe(testData.title);
       expect(response.body.description).toBe(testData.description);
     });
+
+    it("should should return a 404 error if the project doesn't exist", async () => {
+      const response = await request(app)
+        .get(endpointUrl + nonExistingProjectId);
+
+      expect(response.statusCode).toBe(404);
+    });
   });
 });
