@@ -20,6 +20,14 @@ describe("ProjectController", () => {
     next = jest.fn();
   });
 
+  describe(".deleteProject", () => {
+
+    it("should have an deleteProject fuction", () => {
+      expect(typeof ProjectController.deleteProject).toBe("function");
+    });
+
+  });
+
   describe(".updateProject", () => {
 
     it("should have an updateProject fuction", () => {
