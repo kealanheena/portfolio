@@ -48,6 +48,6 @@ exports.updateProject = async (req, res, next) => {
 }
 
 exports.deleteProject = async (req, res, next) => {
-
+  ProjectModel.findByIdAndDelete(req.params.id);
 }
 

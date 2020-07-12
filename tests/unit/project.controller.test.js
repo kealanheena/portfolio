@@ -4,10 +4,7 @@ const httpMocks = require("node-mocks-http");
 const newProject = require("../mock-data/new-project.json");
 const allProjects = require("../mock-data/new-project.json");
 
-ProjectModel.create = jest.fn();
-ProjectModel.find = jest.fn();
-ProjectModel.findById = jest.fn();
-ProjectModel.findByIdAndUpdate = jest.fn();
+jest.mock("../../model/project.model");
 
 describe("ProjectController", () => {
 
@@ -24,6 +21,13 @@ describe("ProjectController", () => {
 
     it("should have an deleteProject fuction", () => {
       expect(typeof ProjectController.deleteProject).toBe("function");
+    });
+
+    it("should call ProjectModel.findByIdAndDelete", async () => {
+      req.params.id = projectId;
+      await ProjectController.deleteProject(req, res, next);
+
+      expect(ProjectModel.findByIdAndDelete).toBeCalledWith(projectId)
     });
 
   });
