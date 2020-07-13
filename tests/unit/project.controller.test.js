@@ -36,12 +36,6 @@ describe("ProjectController", () => {
 
       expect(res.statusCode).toBe(200);
       expect(res._isEndCalled()).toBeTruthy();
-    });
-
-    it("should resturn a json body in the response", async () => {
-      ProjectModel.findByIdAndDelete.mockReturnValue(newProject);
-      await ProjectController.deleteProject(req, res, next);
-
       expect(res._getJSONData()).toStrictEqual(newProject);
     });
 
@@ -88,14 +82,6 @@ describe("ProjectController", () => {
 
       expect(res._isEndCalled()).toBeTruthy();
       expect(res.statusCode).toBe(200);
-    });
-
-    it("should return a json body in response", async () => {
-      req.params.id = projectId;
-      req.body = newProject;
-      ProjectModel.findByIdAndUpdate.mockReturnValue(newProject)
-      await ProjectController.updateProject(req, res, next);
-
       expect(res._getJSONData()).toStrictEqual(newProject);
     });
 
@@ -136,12 +122,6 @@ describe("ProjectController", () => {
 
       expect(res.statusCode).toBe(200);
       expect(res._isEndCalled()).toBeTruthy();
-    });
-
-    it("should return a json body in response", async () => {
-      ProjectModel.findById.mockReturnValue(newProject);
-      await ProjectController.getProjectById(req, res, next);
-
       expect(res._getJSONData()).toStrictEqual(newProject);
     });
 
