@@ -50,7 +50,11 @@ exports.updateProject = async (req, res, next) => {
 exports.deleteProject = async (req, res, next) => {
   try {
     deletedProject = await ProjectModel.findByIdAndDelete(req.params.id);
-    res.status(200).json(deletedProject);
+    if (deletedProject) {
+      res.status(200).json(deletedProject);
+    } else {
+      res.status(404).json("project not found");
+    }
   } catch (err) {
     next(err);
   }

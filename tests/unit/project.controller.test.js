@@ -53,6 +53,14 @@ describe("ProjectController", () => {
 
       expect(next).toBeCalledWith(errorMessage);
     });
+
+    it("should return a 404 status code when the project doesn't exsist", async () => {
+      ProjectModel.findByIdAndDelete.mockReturnValue(null);
+      await ProjectController.deleteProject(req, res, next);
+
+      expect(res.statusCode).toBe(404);
+      expect(res._isEndCalled()).toBeTruthy();
+    });
   });
 
   describe(".updateProject", () => {
