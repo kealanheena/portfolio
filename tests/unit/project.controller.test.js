@@ -30,6 +30,14 @@ describe("ProjectController", () => {
       expect(ProjectModel.findByIdAndDelete).toBeCalledWith(projectId)
     });
 
+    it("should return a 200 response code", async () => {
+      ProjectModel.findByIdAndDelete.mockReturnValue(newProject);
+      await ProjectController.deleteProject(req, res, next);
+
+      expect(res.statusCode).toBe(200);
+      expect(res._isEndCalled()).toBeTruthy();
+    });
+
   });
 
   describe(".updateProject", () => {
