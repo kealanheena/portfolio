@@ -38,6 +38,12 @@ describe("ProjectController", () => {
       expect(res._isEndCalled()).toBeTruthy();
     });
 
+    it("should resturn a json body in the response", async () => {
+      ProjectModel.findByIdAndDelete.mockReturnValue(newProject);
+      await ProjectController.deleteProject(req, res, next);
+
+      expect(res._getJSONData()).toStrictEqual(newProject);
+    });
   });
 
   describe(".updateProject", () => {
