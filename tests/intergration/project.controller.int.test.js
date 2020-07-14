@@ -61,13 +61,13 @@ describe(endpointUrl, () => {
   describe("GET BY ID Intergration Tests", () => {
     test(`GET BY ID ${endpointUrl}`, async () => {
       const response = await request(app)
-        .get(endpointUrl + newProjectId);
+        .get(endpointUrl + firstProject._id);
 
       expect(response.statusCode).toBe(200);
-      expect(response.body.title).toBe(newProject.title);
-      expect(response.body.description).toBe(newProject.description);
-      expect(response.body.website).toBe(newProject.website);
-      expect(response.body.github).toBe(newProject.github);
+      expect(response.body.title).toBe(firstProject.title);
+      expect(response.body.description).toBe(firstProject.description);
+      expect(response.body.website).toBe(firstProject.website);
+      expect(response.body.github).toBe(firstProject.github);
     });
 
     it("should should return a 404 error if the project doesn't exist", async () => {
@@ -95,6 +95,18 @@ describe(endpointUrl, () => {
         .get(endpointUrl + nonExistingProjectId);
 
       expect(response.statusCode).toBe(404);
+    });
+  });
+
+  describe("DELETE Intergration Tests", () => {
+    test(`DELETE ${endpointUrl}`, async () => {
+      const response = await request(app)
+      .delete(endpointUrl + newProjectId)
+      .send();
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body.title).toBe(testData.title);
+      expect(response.body.description).toBe(testData.description);
     });
   });
 });
