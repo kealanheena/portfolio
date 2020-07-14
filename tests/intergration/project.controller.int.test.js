@@ -102,11 +102,18 @@ describe(endpointUrl, () => {
     test(`DELETE ${endpointUrl}`, async () => {
       const response = await request(app)
       .delete(endpointUrl + newProjectId)
-      .send();
+      .send(testData);
 
       expect(response.statusCode).toBe(200);
       expect(response.body.title).toBe(testData.title);
       expect(response.body.description).toBe(testData.description);
+    });
+
+    it("should should return a 404 error if the project doesn't exist", async () => {
+      const response = await request(app)
+        .delete(endpointUrl + nonExistingProjectId);
+
+      expect(response.statusCode).toBe(404);
     });
   });
 });
