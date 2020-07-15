@@ -17,4 +17,8 @@ app.get("/", (req, res) => {
   res.json("hello world");
 });
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.status('client/build'))
+}
+
 module.exports = app;
