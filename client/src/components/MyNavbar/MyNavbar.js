@@ -4,16 +4,16 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const MyNavbar = () => (
   <div>
-    <Navbar bg="dark" variant="dark">
+    <Navbar sticky="top" bg="dark" variant="dark">
       <Navbar.Brand href="#home">
         <img
           alt=""
-          src="/logo.svg"
+          src="#"
           width="30"
           height="30"
           className="d-inline-block align-top"
         />{' '}
-        React Bootstrap
+        Kealan Heena
       </Navbar.Brand>
     </Navbar>
   </div>

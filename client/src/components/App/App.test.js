@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
-import Navbar from '../Navbar/Navbar';
+import MyNavbar from '../MyNavbar/MyNavbar';
 
 describe("App", () => {
   let wrapper;
@@ -12,8 +12,8 @@ describe("App", () => {
     expect(wrapper.find("div").length).toBe(1);
   });
 
-  it("should render a Navbar Component", () => {
-    expect(wrapper.containsMatchingElement(<Navbar />)).toEqual(true);
+  it("should render a MyNavbar Component", () => {
+    expect(wrapper.containsMatchingElement(<MyNavbar />)).toEqual(true);
   });
 });
 
