@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Navbar from './Navbar';
+import MyNavbar from './MyNavbar';
 
 describe("Navbar", () => {
 
   let wrapper;
   
-  beforeEach(() => { wrapper = shallow(<Navbar/>) });
+  beforeEach(() => { wrapper = shallow(<MyNavbar/>) });
 
   it("should render a <div/>", () => {
     expect(wrapper.find("div").length).toEqual(1);
