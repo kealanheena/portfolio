@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kealanheena/portfolio/issues"
   },
-  "homepage": "https://github.com/kealanheena/portfolio#readme"
+  "homepage": "https://github.com/kealanheena/portfolio#readme",
+  "dependencies": {
+    "mdbreact": "^4.27.0"
+  }
 }

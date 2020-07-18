@@ -1,11 +1,13 @@
 import React from 'react';
-import { Card, Badge, Button } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import Iframe from '../Iframe/Iframe';
 
 export function ProjectCard({ data, setOrder }) {
   return (
     <Card className="h-100 shadow-sm bg-white rounded">
-      <Card.Img variant="top" src={data.github}/>
-      <Card.Body className="d-flex flex-cloumn">
+      <Iframe displayedWebsite={data.website}/>
+      {/* <Card.Img variant="top" src={data.website}/> */}
+      <Card.Body className="d-flex flex-column">
         <div className="d-flex mb-2 justify-content-between">
           <Card.Title className="mb-0 font-weight-bold">
             {data.title}
