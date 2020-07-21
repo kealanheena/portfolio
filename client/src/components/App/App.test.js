@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 import MyNavbar from '../MyNavbar/MyNavbar';
+import MainContainer from '../MainContainer/MainContainer';
 
 describe("App", () => {
   let wrapper;
@@ -14,6 +15,10 @@ describe("App", () => {
 
   it("should render a MyNavbar Component", () => {
     expect(wrapper.containsMatchingElement(<MyNavbar />)).toEqual(true);
+  });
+
+  it("should render a MyNavbar Component", () => {
+    expect(wrapper.containsMatchingElement(<MainContainer />)).toEqual(true);
   });
 });
 
