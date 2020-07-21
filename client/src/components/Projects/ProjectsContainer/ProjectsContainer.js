@@ -4,8 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import { MDBContainer } from "mdbreact";
 
-import "./ProjectsContainer.css";
 import projects from '../../../testData.json'; 
+import "./ProjectsContainer.css";
 
 const ProjectsContainer = () => {
   const scrollContainerStyle = { width: "1200px", maxHeight: "450px" };
