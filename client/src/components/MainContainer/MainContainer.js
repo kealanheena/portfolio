@@ -1,23 +1,12 @@
 import React from 'react';
 
-import { Container, Row, Col } from 'react-bootstrap';
-import ProjectScrollBar from '../Projects/ProjectsScrollBar/ProjectsScrollBar';
-// import { ProjectCard } from '../ProjectCard/ProjectCard';
-// import projects from '../../testData.json'; 
+import { Container } from 'react-bootstrap';
+import ProjectContainer from '../Projects/ProjectsContainer/ProjectsContainer';
 
 const MainContainer = () => (
   <div>
     <Container>
-      {/* <Row>
-        {projects.map( data => (
-          <Col xs={6} className="mb-5" key={`${data.id}`}>
-            <ProjectCard data={data} />
-          </Col>
-        )
-        )}
-      </Row> */}
-      <ProjectScrollBar/>
-
+      <ProjectContainer/>
     </Container>
   </div>
 )
