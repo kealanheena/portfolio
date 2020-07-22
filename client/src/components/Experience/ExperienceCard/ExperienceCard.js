@@ -10,6 +10,8 @@ export function ExperienceCard({ data }) {
             {data.job}
           </Card.Title>
         </div>
+        <Card.Text className="text-secondary"><em>{data.company}</em></Card.Text>
+        <Card.Text className="text-secondary">{data.startDate} - {data.endDate}</Card.Text>
         <Card.Text className="text-secondary">{data.description}</Card.Text>
       </Card.Body>
     </Card>
