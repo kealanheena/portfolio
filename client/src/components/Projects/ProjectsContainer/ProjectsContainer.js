@@ -8,7 +8,7 @@ import projects from '../../../testData.json';
 import "./ProjectsContainer.css";
 
 const ProjectsContainer = () => {
-  const scrollContainerStyle = { width: "1200px", maxHeight: "450px" };
+  const scrollContainerStyle = { maxHeight: "450px" };
   return (
     <div id="projects">
       <MDBContainer>
