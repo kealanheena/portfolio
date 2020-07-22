@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import Iframe from '../Iframe/Iframe';
 
-export function ProjectCard({ data, setOrder }) {
+export function ProjectCard({ data }) {
   return (
     <Card className="h-100 shadow-sm bg-dark text-white rounded">
       <Iframe displayedWebsite={data.website}/>
