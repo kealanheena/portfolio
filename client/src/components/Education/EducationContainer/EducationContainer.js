@@ -2,7 +2,7 @@ import React from "react";
 
 import EducationCard from "../EducationCard/EducationCard";
 import education from '../../../testData/educationData.json';
-import { Container, CardColumns } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 
 // import './EducationContainer.css'
 
@@ -11,15 +11,15 @@ const EducationContainer = () => {
     <div id="Education">
       <Container>
         <h2>Education</h2>
-        <CardColumns>
+        <Row>
           {education.map( data => (
-              // <Col xs={6} className="mb-5" key={`${data.id}`}>
+              <Col xs={6} className="mb-5" key={`${data.id}`}>
               <div key={`${data.id}`}><EducationCard data={data} /></div>
                 
-              // </Col>
+              </Col>
             )
           )}
-        </CardColumns>
+        </Row>
       </Container>
     </div>
   );

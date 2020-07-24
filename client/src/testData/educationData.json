@@ -20,5 +20,16 @@
     "endDate": "Feburay 2020",
     "description": "I learned a lot here",
     "website": "https://makers.tech/"
+  },
+  {
+    "id": 1,
+    "image": "https://payload.cargocollective.com/1/4/159426/4629630/7.jpg",
+    "name": "Loreto Community School",
+    "qualification": "Leaving Certificate",
+    "address": "Convent Rd, Millford, Milford, Co. Donegal, Ireland",
+    "startDate": "September 2009",
+    "endDate": "June 2015",
+    "description": "I learned a lot here",
+    "website": "#education"
   }
 ]
