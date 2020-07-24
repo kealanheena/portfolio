@@ -18,9 +18,13 @@ const ProjectsContainer = () => {
             <Container>
               <Row>
                 {projects.map( data => (
+                  // <div id={data.name}>
                   <Col xs={6} className="mb-5" key={`${data.id}`}>
-                    <ProjectCard data={data} />
+                    <div id={data.title.replace(/\s/g,'')}>
+                      <ProjectCard data={data} />
+                    </div>
                   </Col>
+                  // </div>
                 )
                 )}
               </Row>

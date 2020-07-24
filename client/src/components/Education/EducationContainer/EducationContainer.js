@@ -8,7 +8,7 @@ import { Container, Col, Row } from "react-bootstrap";
 
 const EducationContainer = () => {
   return (
-    <div id="Education">
+    <div id="education">
       <Container>
         <h2>Education</h2>
         <Row>

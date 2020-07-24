@@ -12,6 +12,6 @@
   {
     "id": 2,
     "name": "Mongo",
-    "projects": ["Todo TDD", "YelpCamp"]
+    "projects": ["Todo TDD", "YelpCamp", "First Test Project"]
   }
 ]

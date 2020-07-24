@@ -14,7 +14,7 @@ export function SkillsCard({ data }) {
               // <Col xs={6} className="mb-5" key={`${data.id}`}>
               // <div key={`${data.id}`}><SkillsCard data={data} /></div>
                 <ListGroup.Item>
-                  <Card.Link href="#projects">{data}</Card.Link>
+                  <Card.Link href={`#${data.replace(/\s/g,'')}`}>{data}</Card.Link>
                 </ListGroup.Item>
               // </Col>
             )
