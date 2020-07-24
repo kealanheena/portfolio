@@ -1,7 +1,7 @@
 import React from "react";
 
 import ExperienceCard from "../ExperienceCard/ExperienceCard";
-import experience from '../../../testData/ExperiencData.json';
+import experience from '../../../testData/experienceData.json';
 import { Container, CardColumns } from "react-bootstrap";
 
 import './ExperienceContainer.css'

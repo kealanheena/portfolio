@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "projects": ["React Calculator", "Glucometer"]
+  },
+  {
+    "id": 2,
+    "name": "Ruby",
+    "projects": ["Makers BNB", "Acebook"]
+  },
+  {
+    "id": 2,
+    "name": "Mongo",
+    "projects": ["Todo TDD", "YelpCamp"]
+  }
+]
