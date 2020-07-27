@@ -6,6 +6,7 @@ import ExperienceContainer from '../Experience/ExperienceContainer/ExperienceCon
 import ProjectContainer from '../Projects/ProjectsContainer/ProjectsContainer';
 import EducationContainer from '../Education/EducationContainer/EducationContainer'
 import SkillsContainer from '../Skills/SkillsContainer/SkillsContainer';
+import HobbiesContainer from '../Hobbies/HobbiesContainer/HobbiesContainer';
 
 
 const MainContainer = () => (
@@ -16,6 +17,7 @@ const MainContainer = () => (
       <ProjectContainer/>
       <EducationContainer/>
       <SkillsContainer/>
+      <HobbiesContainer/>
     </Container>
   </div>
 )
