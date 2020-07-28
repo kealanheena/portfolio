@@ -16,4 +16,9 @@ describe("Navbar", () => {
   it("should render a Navbar Component", () => {
     expect(wrapper.containsMatchingElement(<Navbar />)).toEqual(true);
   });
+
+  it("should render a Nav Component", () => {
+    expect(wrapper.containsMatchingElement(<Nav />)).toEqual(true);
+  });
+
 })
