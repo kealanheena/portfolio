@@ -13,12 +13,16 @@ describe("Navbar", () => {
     expect(wrapper.find("div").length).toEqual(0);
   });
 
-  it("should render a Navbar Component", () => {
-    expect(wrapper.containsMatchingElement(<Navbar />)).toEqual(true);
+  it("should render a Nav Component", () => {
+    expect(wrapper.find("Nav").length).toEqual(2);
   });
 
   it("should render a Nav Component", () => {
-    expect(wrapper.containsMatchingElement(<Nav />)).toEqual(true);
+    expect(wrapper.find("Navbar").length).toEqual(1);
+  });
+
+  it("should render a Nav Component", () => {
+    expect(wrapper.find("NavLink").length).toEqual(7);
   });
 
 })
