@@ -9,9 +9,7 @@ describe("Navbar", () => {
   
   beforeEach(() => { wrapper = shallow(<MyNavbar/>) });
 
-  it("should render a <div/>", () => {
-    expect(wrapper.find("div").length).toEqual(0);
-  });
+  it("should render correctly", () => expect(wrapper).toMatchSnapshot());
 
   it("should render a Navbar Component", () => {
     expect(wrapper.find("Navbar").length).toEqual(1);
@@ -25,7 +23,7 @@ describe("Navbar", () => {
     expect(wrapper.find("Nav").length).toEqual(2);
   });
 
-  it("should render a Nav Component", () => {
+  it("should render a NavLink Component", () => {
     expect(wrapper.find("NavLink").length).toEqual(7);
   });
 

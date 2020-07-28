@@ -1,6 +1,6 @@
 import React from 'react';
 import './MyNavbar.css';
-import { Navbar, NavbarBrand,Nav, NavLink } from 'react-bootstrap';
+import { Navbar, NavbarBrand, Nav, NavLink } from 'react-bootstrap';
 
 const MyNavbar = () => (
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
