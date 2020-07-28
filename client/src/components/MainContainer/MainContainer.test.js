@@ -4,6 +4,7 @@ import MainContainer from './MainContainer';
 import Profile from '../Profile/Profile';
 import ExperienceContainer from '../Experience/ExperienceContainer/ExperienceContainers';
 import ProjectContainer from '../Projects/ProjectsContainer/ProjectsContainer';
+import EducationContainer from '../Education/EducationContainer/EducationContainer';
 
 describe("MainContainer", () => {
   let wrapper;
@@ -23,11 +24,15 @@ describe("MainContainer", () => {
   });
 
   it("should render an ExperienceContainer component", () => {
-    expect(wrapper.containsMatchingElement(<ExperienceContainer />)).toEqual(true)
+    expect(wrapper.containsMatchingElement(<ExperienceContainer />)).toEqual(true);
   });
 
   it("should render a ProjectContainer component", () => {
-    expect(wrapper.containsMatchingElement(<ProjectContainer />)).toEqual(true)
+    expect(wrapper.containsMatchingElement(<ProjectContainer />)).toEqual(true);
+  });
+
+  it("should render a EducationContainer component", () => {
+    expect(wrapper.containsMatchingElement(<EducationContainer />)).toEqual(true);
   });
   
 });
