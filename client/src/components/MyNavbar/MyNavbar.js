@@ -1,10 +1,10 @@
 import React from 'react';
 import './MyNavbar.css';
-import { Navbar, Nav, NavLink } from 'react-bootstrap';
+import { Navbar, NavbarBrand,Nav, NavLink } from 'react-bootstrap';
 
 const MyNavbar = () => (
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
-    <Navbar.Brand href="/">Kealan Heena</Navbar.Brand>
+    <NavbarBrand href="/">Kealan Heena</NavbarBrand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">

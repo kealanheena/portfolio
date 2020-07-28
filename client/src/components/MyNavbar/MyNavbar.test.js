@@ -13,12 +13,16 @@ describe("Navbar", () => {
     expect(wrapper.find("div").length).toEqual(0);
   });
 
-  it("should render a Nav Component", () => {
-    expect(wrapper.find("Nav").length).toEqual(2);
+  it("should render a Navbar Component", () => {
+    expect(wrapper.find("Navbar").length).toEqual(1);
+  });
+
+  it("should render a NavbarBrand Component", () => {
+    expect(wrapper.find("NavbarBrand").length).toEqual(1);
   });
 
   it("should render a Nav Component", () => {
-    expect(wrapper.find("Navbar").length).toEqual(1);
+    expect(wrapper.find("Nav").length).toEqual(2);
   });
 
   it("should render a Nav Component", () => {
