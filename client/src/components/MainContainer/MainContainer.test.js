@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import MainContainer from './MainContainer';
 import Profile from '../Profile/Profile';
+import ExperienceContainer from '../Experience/ExperienceContainer/ExperienceContainers';
 
 describe("MainContainer", () => {
   let wrapper;
@@ -19,4 +20,8 @@ describe("MainContainer", () => {
   it("should render a Profile Component", () => {
     expect(wrapper.containsMatchingElement(<Profile />)).toEqual(true);
   });
+
+  it("should render a ExperienceContainer component", () => {
+    expect(wrapper.containsMatchingElement(<ExperienceContainer />))
+  })
 });
