@@ -12,4 +12,8 @@ describe("MainContainer", () => {
     expect(wrapper.find("div").length).toBe(1);
   });
   
+  it("should render a Container Component", () => {
+    expect(wrapper.find("Container").length).toEqual(1);
+  });
+  
 });
