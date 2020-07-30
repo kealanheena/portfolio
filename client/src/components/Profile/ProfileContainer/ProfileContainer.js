@@ -1,13 +1,13 @@
 import React from "react";
 
 
-import portrait from './img/portrait.png';
-import ProfileLinks from './ProfileLinks/ProfileLinks'
+import portrait from '../img/portrait.png';
+import ProfileLinks from '../ProfileLinks/ProfileLinks'
 import { Card, Container, Col, Row } from 'react-bootstrap';
 
-import './Profile.css'
+import './ProfileContainer.css'
 
-const Profile = () => {
+const ProfileContainer = () => {
   return (
     <div id="aboutMe">
       <Container>
@@ -35,4 +35,4 @@ const Profile = () => {
   );
 }
 
-export default Profile;
+export default ProfileContainer;

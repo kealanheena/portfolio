@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import MainContainer from './MainContainer';
-import Profile from '../Profile/Profile';
+import ProfileContainer from '../Profile/ProfileContainer/ProfileContainer';
 import ExperienceContainer from '../Experience/ExperienceContainer/ExperienceContainers';
 import ProjectContainer from '../Projects/ProjectsContainer/ProjectsContainer';
 import EducationContainer from '../Education/EducationContainer/EducationContainer';
@@ -22,8 +22,8 @@ describe("MainContainer", () => {
     expect(wrapper.find("Container").length).toEqual(1);
   });
 
-  it("should render a Profile Component", () => {
-    expect(wrapper.containsMatchingElement(<Profile />)).toEqual(true);
+  it("should render a ProfileContainer Component", () => {
+    expect(wrapper.containsMatchingElement(<ProfileContainer />)).toEqual(true);
   });
 
   it("should render an ExperienceContainer component", () => {
