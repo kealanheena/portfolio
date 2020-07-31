@@ -8,7 +8,7 @@ import { Container, CardColumns } from "react-bootstrap";
 
 const HobbiesContainer = () => {
   return (
-    <div id="Hobbies">
+    <div className="section-container" id="Hobbies">
       <Container>
         <h2>Hobbies</h2>
         <CardColumns>

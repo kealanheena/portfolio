@@ -8,7 +8,7 @@ import './ExperienceContainer.css'
 
 const ExperienceContainer = () => {
   return (
-    <div id="experience">
+    <div className="section-container" id="experience">
       <Container>
         <h2>Experience</h2>
         <CardColumns>

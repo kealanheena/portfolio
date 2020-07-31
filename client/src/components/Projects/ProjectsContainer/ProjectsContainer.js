@@ -10,7 +10,7 @@ import "./ProjectsContainer.css";
 const ProjectsContainer = () => {
   const scrollContainerStyle = { maxHeight: "450px" };
   return (
-    <div id="projects">
+    <div className="section-container" id="projects">
       <Container>
         <h2>Projects</h2>
         <MDBContainer>

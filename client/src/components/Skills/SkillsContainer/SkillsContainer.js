@@ -6,7 +6,7 @@ import { Container, CardColumns } from "react-bootstrap";
 
 const SkillsContainer = () => {
   return (
-    <div id="skills">
+    <div className="section-container" id="skills">
       <Container>
         <h2>Skills</h2>
         <CardColumns>

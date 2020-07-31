@@ -13,6 +13,7 @@ code {
     monospace;
 }
 
-.title {
-  padding-top: 90px;
+.section-container {
+  padding-top: 75px;
+  margin-bottom: -75px;
 }

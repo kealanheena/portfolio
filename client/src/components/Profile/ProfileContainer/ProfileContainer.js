@@ -9,7 +9,7 @@ import './ProfileContainer.css'
 
 const ProfileContainer = () => {
   return (
-    <div id="aboutMe">
+    <div className="section-container" id="aboutMe">
       <Container>
         <Card>
           <Card.Body>
