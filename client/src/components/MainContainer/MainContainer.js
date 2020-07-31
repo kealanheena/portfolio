@@ -10,7 +10,7 @@ import HobbiesContainer from '../Hobbies/HobbiesContainer/HobbiesContainer';
 
 
 const MainContainer = () => (
-  <div>
+  <div className="main-container">
     <Container>
       <ProfileContainer/>
       <ExperienceContainer/>
