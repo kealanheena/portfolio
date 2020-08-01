@@ -16,8 +16,11 @@ describe("MainContainer", () => {
     expect(wrapper.find("Container").length).toEqual(1);
   });
 
-  it("should render a Container Component", () => {
+  it("should render a Card Component", () => {
     expect(wrapper.find("Card").length).toEqual(1);
   });
   
+  it("should render a Row Component", () => {
+    expect(wrapper.find("Row").length).toEqual(1);
+  });
 });
