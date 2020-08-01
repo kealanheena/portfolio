@@ -23,4 +23,8 @@ describe("MainContainer", () => {
   it("should render a Row Component", () => {
     expect(wrapper.find("Row").length).toEqual(1);
   });
+
+  it("should render a Col Component", () => {
+    expect(wrapper.find("Col").length).toEqual(2);
+  });
 });
