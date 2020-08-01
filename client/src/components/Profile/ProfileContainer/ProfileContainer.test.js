@@ -15,5 +15,9 @@ describe("MainContainer", () => {
   it("should render a Container Component", () => {
     expect(wrapper.find("Container").length).toEqual(1);
   });
+
+  it("should render a Container Component", () => {
+    expect(wrapper.find("Card").length).toEqual(1);
+  });
   
 });
