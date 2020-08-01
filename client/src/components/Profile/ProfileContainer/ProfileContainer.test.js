@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import ProfileContainer from './ProfileContainer';
+import ProfileLinks from '../ProfileLinks/ProfileLinks';
 
 describe("MainContainer", () => {
   let wrapper;
@@ -26,5 +27,9 @@ describe("MainContainer", () => {
 
   it("should render a Col Component", () => {
     expect(wrapper.find("Col").length).toEqual(2);
+  });
+
+  it("should render a ProfileLinks Component", () => {
+    expect(wrapper.containsMatchingElement(<ProfileLinks />)).toEqual(true);
   });
 });

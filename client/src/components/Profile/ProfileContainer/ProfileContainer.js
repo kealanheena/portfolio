@@ -2,7 +2,7 @@ import React from "react";
 
 
 import portrait from '../img/portrait.png';
-import ProfileLinks from '../ProfileLinks/ProfileLinks'
+import ProfileLinks from '../ProfileLinks/ProfileLinks';
 import { Card, Container, Col, Row } from 'react-bootstrap';
 
 import './ProfileContainer.css'
