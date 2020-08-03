@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import ProfileContainer from './ProfileContainer';
 import ProfileLinks from '../ProfileLinks/ProfileLinks';
 
-describe("MainContainer", () => {
+describe("ProfileContainer", () => {
   let wrapper;
 
   beforeEach(() => { wrapper = shallow(<ProfileContainer/>) });
