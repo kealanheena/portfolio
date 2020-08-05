@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/kealanheena/portfolio#readme",
   "dependencies": {
-    "mdbreact": "^4.27.0"
+    "mdbreact": "^4.27.0",
+    "react-slick": "^0.27.2",
+    "slick-carousel": "^1.8.1"
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slider from '../Slider/Slider';
 
 class App extends Component {
 
@@ -36,11 +37,7 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <ul>
-            {items.map(item => (
-              <li key={item._id}>{item.title}</li>
-            ))}
-          </ul>
+          <Slider projects={items} />
         </div>
       );
     }
