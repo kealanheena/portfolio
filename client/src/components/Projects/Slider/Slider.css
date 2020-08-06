@@ -1,0 +1,11 @@
+.slick-slide {
+  padding: 0 0.5rem;
+}
+
+.slick-slide .slick-cloned [aria-hidden="false"] {
+  padding: 100px;
+}
+
+button .slick-arrow {
+  background-color: #000;
+}

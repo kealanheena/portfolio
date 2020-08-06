@@ -16,9 +16,9 @@ class CenterMode extends Component {
       infinite: true,
       slidesToShow: 3,
       speed: 2000,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      pauseOnHover: true
+      // autoplay: true,
+      // autoplaySpeed: 4000,
+      // pauseOnHover: true
     };
     return (
       <div>

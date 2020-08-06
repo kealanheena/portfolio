@@ -5,7 +5,7 @@ import Iframe from '../Iframe/Iframe';
 export default function ProjectCard({ data }) {
   return (
     <div>
-      <Card className="h-100 shadow-sm bg-dark text-white rounded">
+      <Card className="h-100 shadow-sm bg-white text-dark rounded">
         <Iframe displayedWebsite={data.website}/>
         <Card.Body className="d-flex flex-column">
           <div className="d-flex mb-2 justify-content-between">
@@ -13,7 +13,7 @@ export default function ProjectCard({ data }) {
               {data.title}
             </Card.Title>
           </div>
-          <Card.Text className="text-secondary">{data.description}</Card.Text>
+          <Card.Text className="text-dark">{data.description}</Card.Text>
           <Button 
             href={data.github}
             variant="success">
