@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
 import Slider from '../Slider/Slider';
 
 class App extends Component {
@@ -37,7 +38,9 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <Slider projects={items} />
+          <Container>
+            <Slider projects={items} />
+          </Container>
         </div>
       );
     }
