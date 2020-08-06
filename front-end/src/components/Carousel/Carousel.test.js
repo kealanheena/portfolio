@@ -6,9 +6,9 @@ import { shallow } from 'enzyme';
 describe('Carousel', () => {
   let wrapper;
 
-  // beforeEach(() => wrapper = shallow(<Carousel/>));
+  beforeEach(() => wrapper = shallow(<Carousel/>));
 
-  it('should render a <div />', () => {
-    expect(true).toEqual(true)
+  it('should render 3 <div />\'s', () => {
+    expect(wrapper.find('div').length).toEqual(3)
   });
 });
