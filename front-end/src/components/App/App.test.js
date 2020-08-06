@@ -14,7 +14,7 @@ describe('App', () => {
   });
 
   it('should render a Profile component', () => {
-    expect(wrapper.containsMatchingElement(<Profile/>)).toBe(true)
+    expect(wrapper.containsMatchingElement(<Profile/>)).toEqual(true)
   });
 
 });

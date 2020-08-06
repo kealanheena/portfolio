@@ -5,5 +5,10 @@ import Profile from './Profile';
 
 describe('Profile', () => {
   let wrapper;
-  it()
+
+  beforeEach(() => wrapper = shallow(<Profile/>));
+
+  it('should render a <div />', () => {
+    expect(wrapper.find('div').length).toEqual(1);
+  });
 });
