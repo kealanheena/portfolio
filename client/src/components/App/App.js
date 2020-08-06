@@ -1,50 +1,17 @@
-import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
-import Slider from '../Slider/Slider';
+import React from 'react';
 
-class App extends Component {
+import './App.css';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      isLoaded: false
-    }
-  }
+import MyNavbar from '../MyNavbar/MyNavbar';
+import MainContainer from '../MainContainer/MainContainer';
 
-  componentDidMount() {
-
-    fetch("http://localhost:3001/projects")
-      .then(res => res.json())
-      .then(json => {
-        this.setState({
-          isLoaded: true,
-          items: json
-        })
-      });
-
-  }
-
-  render() {
-
-    var { isLoaded, items } = this.state
-
-    if(!isLoaded) {
-      return (
-        <div>
-          Loading . . .
-        </div>
-      )
-    } else {
-      return (
-        <div className="App">
-          <Container>
-            <Slider projects={items} />
-          </Container>
-        </div>
-      );
-    }
-  }
+function App() {
+  return (
+    <div className="App">
+      <MyNavbar/>
+      <MainContainer/>
+    </div>
+  );
 }
 
 export default App;

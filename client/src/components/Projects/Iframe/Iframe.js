@@ -7,7 +7,7 @@ import './Iframe.css'
 
 const Iframe = ({ displayedWebsite }) => {
   return(
-    <div className='iframeContainer iframe'>
+    <div className='iframeContainer'>
       <MDBContainer className='text-center'>
         <MDBIframe src={displayedWebsite} />
       </MDBContainer>

@@ -1,7 +1,12 @@
 {
   "name": "client",
+  "author": "Kealan Heena",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.13.1",
+    "npm": "6.12.1"
+  },
   "dependencies": {
     "bootstrap": "^4.5.0",
     "react": "^16.13.1",
@@ -25,24 +30,15 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "jest": {
-      "snapshotSerializers": [
-        "enzyme-to-json/serializer"
-      ]
-    },
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }
