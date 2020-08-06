@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Iframe from '../Iframe/Iframe';
+import Iframe from '../Iframe/Iframe.js';
 import projects from '../../projects.json';
 import { Container, Card, Button } from 'react-bootstrap';
 
