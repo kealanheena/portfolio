@@ -12,7 +12,7 @@ class CenterMode extends Component {
     const settings = {
       className: "center",
       centerMode: true,
-      dots: true,
+      // dots: true,
       infinite: true,
       slidesToShow: 3,
       speed: 2000,
