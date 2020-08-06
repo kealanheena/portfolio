@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class LeftArrow extends Component {
   render() {
     return (
-      <div>
-        <FontAwesomeIcon icon="chevron-left"/>
+      <div className="backArrow" onClick={this.props.goToPreviousSlide}>
+        <FontAwesomeIcon icon="faChevronLeft"/>
       </div>
     )
   }
