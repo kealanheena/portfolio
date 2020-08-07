@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Slide from './Slide/Slide';
+import Slide from './Slide/Slide';
 import data from './CarouselData/CarouselData';
 import LeftArrow from './LeftArrow/LeftArrow';
 import RightArrow from './RightArrow/RightArrow';
@@ -8,6 +8,9 @@ import './Carousel.css';
 class Carousel extends Component {
   constructor(props) {
     super(props);
+
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
 
     this.state = {
       activeIndex: 0,
@@ -18,6 +21,8 @@ class Carousel extends Component {
   goToPrevSlide() {
     let index = this.state.activeIndex;
     let length = this.state.length;
+
+    
 
     if(index < 1) {
       index = length - 1;
@@ -46,21 +51,20 @@ class Carousel extends Component {
       <div className='slider'>
         <div className='slider-items'>
           <LeftArrow
-            goToPrevSlide={() => this.goToPrevSlide}
+            goToPrevSlide={ this.goToPrevSlide }
           />
           <div className='slider-text'>
-            {/* <Slide
+            <Slide
               activeIndex={this.state.activeIndex}
-            /> */}
+            />
           </div>
           <RightArrow
-            goToNextSlide={() => this.goToNextSlide}
+            goToNextSlide={ this.goToNextSlide }
           />
         </div>
       </div>
     )
   }
-
 }
 
 export default Carousel;
