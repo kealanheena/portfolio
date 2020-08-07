@@ -13,8 +13,10 @@ class Slide extends Component {
       <section>
         {
           this.state.landing.map((s, index) => 
-            <div className={
-              index === this.props.activeIndex ? 'active' : 'inactive'}
+            <div className={ 
+              index === this.props.activeIndex ? 'active' : 'inactive'
+            }
+                  
               key={index}>
                 <h1>{s.title}</h1>
                 <p>{s.description}</p>

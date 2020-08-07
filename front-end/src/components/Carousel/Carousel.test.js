@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 import Carousel from './Carousel';
 import LeftArrow from './LeftArrow/LeftArrow';
 import RightArrow from './RightArrow/RightArrow';
+import Slide from './Slide/Slide'
 
 
 describe('Carousel', () => {
@@ -21,5 +22,9 @@ describe('Carousel', () => {
 
   it('should render a RightArrow component', () => {
     expect(wrapper.containsMatchingElement(<RightArrow/>)).toEqual(true)
+  });
+
+  it('should render a Slide component', () => {
+    expect(wrapper.containsMatchingElement(<Slide/>)).toEqual(true)
   });
 });

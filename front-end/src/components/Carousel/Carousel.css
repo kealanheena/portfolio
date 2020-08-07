@@ -27,11 +27,6 @@ p {
   animation: active 5s;
 }
 
-@keyframes inactive {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
 .active {
   display: block;
   animation: active 5s;
@@ -73,4 +68,34 @@ p {
 
 .slider-text {
   width: 800px;
+}
+
+@media screen and (max-width: 900px) {
+  .slider-text {
+    width: 400px;
+  }
+
+  .backArrow {
+    font-size: 2.5rem;
+  }  
+}
+
+@media screen and (max-width: 500px) {
+  .slider-text {
+    width: 200px;
+  }
+
+  .backArrow {
+    font-size: 2rem;
+  }  
+}
+
+@media screen and (max-width: 300px) {
+  .slider-text {
+    width: 100px;
+  }
+
+  .backArrow {
+    font-size: 1.5rem;
+  }  
 }
