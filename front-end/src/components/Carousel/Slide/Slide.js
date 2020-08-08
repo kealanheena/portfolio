@@ -18,7 +18,7 @@ class Slide extends Component {
           landing.map((s, index) => 
             <div>
               <div className={ 
-                index === this.props.activeIndex ? 'active' : 'inactive'
+                index === this.props.activeIndex  ? 'active' : 'inactive'
               }
                     
                 key={s._id}>

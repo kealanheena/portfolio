@@ -12,4 +12,8 @@ describe('Navbar', () => {
   it('should render a <header />', () => {
     expect(wrapper.find('header').length).toEqual(1)
   });
+
+  it('should render a <nav />', () => {
+    expect(wrapper.find('nav').length).toEqual(1)
+  });
 });
