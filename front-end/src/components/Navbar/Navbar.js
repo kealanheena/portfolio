@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 const navbar = props => (
   <header>
-    <nav></nav>
+    <nav>
+      <div></div>
+      <div></div>
+      <div></div>
+    </nav>
   </header>
 )
 
