@@ -32,6 +32,10 @@ p {
   animation: active 5s;
 }
 
+.index {
+  display: block;
+}
+
 @keyframes active {
   from {opacity: 0;}
   to {opacity: 1;}

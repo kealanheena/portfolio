@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import data from '../CarouselData/CarouselData';
+// import data from '../CarouselData/CarouselData';
 
 class Slide extends Component {
   constructor(props) {
     super(props);
 
-    this.state ={ landing: data }
+    this.state ={ landing: this.props.data }
   }
 
   render() {
+
+    var { landing } = this.state;
+
     return(
       <section>
         {
-          this.state.landing.map((s, index) => 
-            <div className={ 
-              index === this.props.activeIndex ? 'active' : 'inactive'
-            }
-                  
-              key={index}>
+          landing.map((s, index) => 
+            <div>
+              <div className={ 
+                index === this.props.activeIndex ? 'active' : 'inactive'
+              }
+                    
+                key={s._id}>
                 <h1>{s.title}</h1>
                 <p>{s.description}</p>
+              </div>
+              <div className={ 
+                index === this.props.activeIndex ? 'index' : 'inactive'
+              }>
+                {`${index + 1}/${landing.length}`}
+              </div>
             </div>
           )
         }

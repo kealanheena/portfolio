@@ -1,17 +1,23 @@
-export default [{
-  title: 'Turn the music up!',
-  description: '',
-},
-{
-  title: 'Choose your music',
-  description: 'The world is full of music; why should you have to listen to music someone else chose?',
-},
-{
-  title: 'Unlimited, streaming, ad-free',
-  description: 'No arbitrary limits. No distractions.',
-},
-{
-  title: 'Mobile enabled',
-  description: 'Listen to your music on the go. This streaming service is available on all mobile platforms.',
-}
+export default [
+    {
+    _id: 1,
+    title: "First Test Project",
+    description: "This is a test project",
+    website: "https://www.youtube.com/embed/watch?v=R4Vh61J5KaI&feature=youtu.be",
+    github: "#"
+  },
+  {
+    _id: 2,
+    title: "Second Test Project",
+    description: "This is a test project",
+    website: "https://www.google.com/",
+    github: "#"
+  },
+  {
+    _id: 3,
+    title: "Third Test Project",
+    description: "This is a test project",
+    website: "https://www.youtube.com/embed/watch?v=R4Vh61J5KaI&feature=youtu.be",
+    github: "#"
+  }
 ];

@@ -54,6 +54,7 @@ class Carousel extends Component {
           <div className='slider-text'>
             <Slide
               activeIndex={this.state.activeIndex}
+              data={data}
             />
           </div>
           <RightArrow
