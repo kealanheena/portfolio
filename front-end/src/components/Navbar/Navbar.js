@@ -9,6 +9,7 @@ const navbar = props => (
       <div className="navbar-logo">
         <a href="/">Logo</a>
       </div>
+      <div className="spacer"/>
       <div className="navbar-navigation-items">
         <ul>
           <li key="pro"><a href="/">Products</a></li>
