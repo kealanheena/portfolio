@@ -19,6 +19,10 @@ describe('App', () => {
     expect(wrapper.containsMatchingElement(<Navbar/>)).toEqual(true)
   });
 
+  it('should render a <main />', () => {
+    expect(wrapper.find('main').length).toEqual(1);
+  });
+
   it('should render a Profile component', () => {
     expect(wrapper.containsMatchingElement(<Profile/>)).toEqual(true)
   });

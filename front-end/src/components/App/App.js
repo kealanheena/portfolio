@@ -10,8 +10,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar/>
-        <Profile/>
-        <Carousel/>
+        <main style={{marginTop: '64px'}}>
+          <Profile/>
+          <Carousel/>
+        </main>
       </div>
     );
   }
