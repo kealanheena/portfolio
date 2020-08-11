@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 
 import App from './App';
 import Navbar from '../Navbar/Navbar';
+import SideDrawer from '../Navbar/SideDrawer/SideDrawer';
 import Profile from '../Profile/Profile';
 import Carousel from '../Carousel/Carousel';
 
@@ -17,6 +18,10 @@ describe('App', () => {
 
   it('should render a Navbar component', () => {
     expect(wrapper.containsMatchingElement(<Navbar/>)).toEqual(true)
+  });
+
+  it('should render a SideDrawer component', () => {
+    expect(wrapper.containsMatchingElement(<SideDrawer/>)).toEqual(true)
   });
 
   it('should render a <main />', () => {
