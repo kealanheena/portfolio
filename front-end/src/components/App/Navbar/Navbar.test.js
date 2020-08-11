@@ -22,19 +22,19 @@ describe('Navbar', () => {
     expect(wrapper.containsMatchingElement(<SideDrawerToggleButton/>)).toEqual(true)
   });
 
-  it('should render 3 <div />\'s', () => {
-    expect(wrapper.find('div').length).toEqual(4)
+  it('should render 6 <div />\'s', () => {
+    expect(wrapper.find('div').length).toEqual(6)
   });
 
-  it('should render a <ul />', () => {
-    expect(wrapper.find('ul').length).toEqual(1);
+  it('should render 3 <ul />\'s', () => {
+    expect(wrapper.find('ul').length).toEqual(3);
   });
 
-  it('should render a <li />', () => {
-    expect(wrapper.find('li').length).toEqual(2);
+  it('should render 5 <li />\'s', () => {
+    expect(wrapper.find('li').length).toEqual(5);
   });
 
-  it('should render a <a />', () => {
-    expect(wrapper.find('a').length).toEqual(3);
+  it('should render a <a />\'s', () => {
+    expect(wrapper.find('a').length).toEqual(6);
   });
 });
