@@ -48,3 +48,19 @@
 .navbar-navigation-items a:active {
   color: grey;
 }
+
+@media (max-width: 768px) {
+  .navbar-navigation-items {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-toggle-button {
+    display: none;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+}
