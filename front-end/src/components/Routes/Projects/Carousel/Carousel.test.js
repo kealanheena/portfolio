@@ -40,14 +40,26 @@ describe('Carousel Mount', () => {
     expect(wrapper.state().activeIndex).toEqual(0);
   });
 
-  it('it should have a activeIndex of 2 after goToPrevState is called', () => {
+  it('it should have a activeIndex of CarouselData.length - 1 after goToPrevState is called', () => {
     wrapper.instance().goToPrevSlide();
-    expect(wrapper.state().activeIndex).toEqual(2);
+    expect(wrapper.state().activeIndex).toEqual(CarouselData.length - 1);
+  });
+
+  it('it should have a activeIndex of 0 after goToPrevState is called, if activeIndex is equal to 1', () => {
+    wrapper.setState({ activeIndex: 1 })
+    wrapper.instance().goToPrevSlide();
+    expect(wrapper.state().activeIndex).toEqual(0);
   });
 
   it('it should have a activeIndex of 1 after goToNextState is called', () => {
     wrapper.instance().goToNextSlide();
     expect(wrapper.state().activeIndex).toEqual(1);
+  });
+
+  it('it should have a activeIndex of 0 after goToNextState is called, if the activeIndex is equal to the CarouselData.length - 1', () => {
+    wrapper.setState({ activeIndex: CarouselData.length - 1 })
+    wrapper.instance().goToNextSlide();
+    expect(wrapper.state().activeIndex).toEqual(0);
   });
 
 });
