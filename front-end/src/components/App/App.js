@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Navbar from '../Navbar/Navbar';
 import SideDrawer from '../Navbar/SideDrawer/SideDrawer';
 import Backdrop from '../Backdrop/Backdrop';
-import Profile from '../Profile/Profile';
-import Carousel from '../Carousel/Carousel';
+
+import Homepage from '../Routes/Homepage/Homepage';
+import Projects from '../Routes/Projects/Projects';
 
 import './App.css';
 
@@ -31,15 +34,19 @@ class App extends Component {
     }
 
     return (
-      <div style={{ height: '100%' }}>
-        <Navbar drawerClickHandler={this.drawerToggleClickHandler}/>
-        <SideDrawer show={this.state.sideDrawerOpen}/>
-        {backdrop}
-        <main style={{marginTop: '64px'}}>
-          <Profile/>
-          <Carousel/>
-        </main>
-      </div>
+      <Router>
+        <div style={{ height: '100%' }}>
+          <Navbar drawerClickHandler={this.drawerToggleClickHandler}/>
+          <SideDrawer show={this.state.sideDrawerOpen}/>
+          {backdrop}
+          <main style={{marginTop: '64px'}}>
+            <Switch>
+              <Route path="/" exact component={Homepage}/>
+              <Route path="/Projects" exact component={Projects}/>
+            </Switch>
+          </main>
+        </div>
+      </Router>
     );
   }
 }

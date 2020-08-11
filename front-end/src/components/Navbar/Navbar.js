@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 import SideDrawerToggleButton from './SideDrawerToggleButton/SideDrawerToggleButton';
@@ -15,8 +16,8 @@ const navbar = props => (
       <div className="spacer"/>
       <div className="navbar-navigation-items">
         <ul>
-          <li><a href="/">Products</a></li>
-          <li><a href="/">Products</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
         </ul>
       </div>
     </nav>
