@@ -18,7 +18,7 @@ describe('Navbar', () => {
   });
 
   it('should render 3 <div />\'s', () => {
-    expect(wrapper.find('div').length).toEqual(3)
+    expect(wrapper.find('div').length).toEqual(4)
   });
 
   it('should render a <ul />', () => {
