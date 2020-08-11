@@ -12,4 +12,8 @@ describe('SideDrawerToggleButton', () => {
   it('should render a <button />', () => {
     expect(wrapper.find('button').length).toEqual(1);
   });
+
+  it('should render a <div />', () => {
+    expect(wrapper.find('div').length).toEqual(3);
+  });
 });

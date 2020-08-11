@@ -1,6 +1,8 @@
 import React from 'react';
 
-const sideDrawerToggle = props => (
+import './SideDrawerToggleButton.css';
+
+const sideDrawerToggleButton = props => (
   <button className="toggle-button">
     <div className="toggle-button-line"></div>
     <div className="toggle-button-line"></div>
@@ -8,4 +10,4 @@ const sideDrawerToggle = props => (
   </button>
 );
 
-export default sideDrawerToggle
+export default sideDrawerToggleButton

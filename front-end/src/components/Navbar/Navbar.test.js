@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Navbar from './Navbar';
+import SideDrawerToggleButton from './SideDrawerToggleButton/SideDrawerToggleButton';
 
 
 describe('Navbar', () => {
@@ -15,6 +16,10 @@ describe('Navbar', () => {
 
   it('should render a <nav />', () => {
     expect(wrapper.find('nav').length).toEqual(1);
+  });
+
+  it('should render a SideDrawerToggleButton component', () => {
+    expect(wrapper.containsMatchingElement(<SideDrawerToggleButton/>)).toEqual(true)
   });
 
   it('should render 3 <div />\'s', () => {
