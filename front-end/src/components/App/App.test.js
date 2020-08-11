@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 import App from './App';
 import Navbar from '../Navbar/Navbar';
 import SideDrawer from '../Navbar/SideDrawer/SideDrawer';
+import Backdrop from '../Backdrop/Backdrop';
 import Profile from '../Profile/Profile';
 import Carousel from '../Carousel/Carousel';
 
@@ -17,11 +18,15 @@ describe('App', () => {
   });
 
   it('should render a Navbar component', () => {
-    expect(wrapper.containsMatchingElement(<Navbar/>)).toEqual(true)
+    expect(wrapper.containsMatchingElement(<Navbar/>)).toEqual(true);
   });
 
   it('should render a SideDrawer component', () => {
-    expect(wrapper.containsMatchingElement(<SideDrawer/>)).toEqual(true)
+    expect(wrapper.containsMatchingElement(<SideDrawer/>)).toEqual(true);
+  });
+
+  it('should render a Backdrop component', () => {
+    expect(wrapper.containsMatchingElement(<Backdrop/>)).toEqual(true)
   });
 
   it('should render a <main />', () => {
@@ -29,11 +34,11 @@ describe('App', () => {
   });
 
   it('should render a Profile component', () => {
-    expect(wrapper.containsMatchingElement(<Profile/>)).toEqual(true)
+    expect(wrapper.containsMatchingElement(<Profile/>)).toEqual(true);
   });
 
   it('should render a Carousel component', () => {
-    expect(wrapper.containsMatchingElement(<Carousel/>)).toEqual(true)
+    expect(wrapper.containsMatchingElement(<Carousel/>)).toEqual(true);
   });
 
 });
