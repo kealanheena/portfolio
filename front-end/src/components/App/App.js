@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Navbar from '../Navbar/Navbar';
-import SideDrawer from '../Navbar/SideDrawer/SideDrawer';
-import Backdrop from '../Backdrop/Backdrop';
+import Navbar from './Navbar/Navbar';
+import SideDrawer from './Navbar/SideDrawer/SideDrawer';
+import Backdrop from './Backdrop/Backdrop';
 
 import Homepage from '../Routes/Homepage/Homepage';
 import Projects from '../Routes/Projects/Projects';

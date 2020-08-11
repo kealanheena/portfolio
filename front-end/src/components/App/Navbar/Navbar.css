@@ -39,15 +39,25 @@
   padding: 0 0.5rem;
 }
 
+.navbar-navigation-items.brands li {
+  padding: 0 1rem;
+}
+
 .navbar-navigation-items a {
-  color: white;
+  color: rgb(235, 235, 235);
   text-decoration: none;
+}
+
+.navbar-navigation-items.brands a {
+  font-size: 1.75rem;
 }
 
 .navbar-navigation-items a:hover,
 .navbar-navigation-items a:active {
-  color: grey;
+  color: white;
 }
+
+
 
 @media (max-width: 768px) {
   .navbar-navigation-items {
@@ -62,5 +72,6 @@
 
   .navbar-logo {
     margin-left: 0;
+    margin-right: 1rem;
   }
 }

@@ -36,9 +36,13 @@
 
 .side-drawer a:hover,
 .side-drawer a:active {
-  color: grey;
+  color: rgb(70, 70, 70);
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+.brand {
+  margin-right: 0.4rem;
 }
 
 @media (min-width: 769px) {

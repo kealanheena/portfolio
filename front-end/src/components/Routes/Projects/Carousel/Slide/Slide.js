@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import data from '../CarouselData/CarouselData';
 
 class Slide extends Component {
   constructor(props) {
