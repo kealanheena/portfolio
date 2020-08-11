@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Slide from './Slide/Slide';
-import data from './CarouselData/CarouselData';
 import LeftArrow from './LeftArrow/LeftArrow';
 import RightArrow from './RightArrow/RightArrow';
+
 import './Carousel.css';
 
 class Carousel extends Component {
@@ -14,7 +14,7 @@ class Carousel extends Component {
 
     this.state = {
       activeIndex: 0,
-      length: data.length
+      length: this.props.data.length
     }
   }
 
@@ -54,7 +54,7 @@ class Carousel extends Component {
           <div className='slider-text'>
             <Slide
               activeIndex={this.state.activeIndex}
-              data={data}
+              data={this.props.data}
             />
           </div>
           <RightArrow
