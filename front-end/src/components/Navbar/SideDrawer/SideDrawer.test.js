@@ -16,4 +16,12 @@ describe('SideDrawer', () => {
   it('should render a <ul />', () => {
     expect(wrapper.find('ul').length).toEqual(1);
   });
+
+  it('should render a <li />', () => {
+    expect(wrapper.find('li').length).toEqual(2);
+  });
+
+  it('should render a <a />', () => {
+    expect(wrapper.find('a').length).toEqual(2);
+  });
 });
