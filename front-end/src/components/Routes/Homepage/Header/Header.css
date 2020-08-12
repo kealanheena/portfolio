@@ -81,3 +81,32 @@
     height: 68%;
   }
 }
+
+@media (max-width: 415px) {
+
+  .header-container {
+    height: 300px;
+  }
+
+  .header-container {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  @keyframes header-text {
+    from {transform: translateY(-25%)}
+    to {transform: translateY(0)}
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .header-img {
+    height: 69%;
+  }
+}
