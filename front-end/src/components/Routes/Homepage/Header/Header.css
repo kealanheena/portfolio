@@ -61,7 +61,7 @@
 
   .header-container {
     justify-content: space-around;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   @keyframes header-text {

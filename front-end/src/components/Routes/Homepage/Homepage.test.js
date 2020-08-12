@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import Homepage from './Homepage';
 import Profile from './Profile/Profile';
 
-
 describe('Homepage', () => {
   let wrapper;
 
