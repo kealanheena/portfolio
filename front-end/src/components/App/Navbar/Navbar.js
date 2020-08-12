@@ -13,7 +13,7 @@ const navbar = props => (
         <SideDrawerToggleButton click={props.drawerClickHandler}/>
       </div>
       <div className="navbar-logo">
-        <a href="/">Logo</a>
+        <a href="/">Kealan Heena</a>
       </div>
       <div className="navbar-navigation-items">
         <ul>

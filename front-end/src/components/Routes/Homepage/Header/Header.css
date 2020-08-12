@@ -1,0 +1,13 @@
+.header-container {
+  background-color: rgba(230, 240, 255, 0.3);
+  padding: 0 25%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+}
+
+.header-img {
+  height: 400px;
+}

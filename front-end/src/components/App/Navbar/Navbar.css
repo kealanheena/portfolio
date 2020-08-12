@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   background-color: black;
-  height: 56px;
+  height: 64px;
 }
 
 .navbar-navigation {
@@ -15,9 +15,13 @@
 }
 
 .navbar-logo a {
-  color: white;
+  color: rgb(245, 245, 245);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar-logo a:hover {
+  color: white;
 }
 
 .navbar-logo {
