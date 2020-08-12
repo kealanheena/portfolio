@@ -1,7 +1,7 @@
 import React from 'react';
-import Carousel from './Carousel/Carousel';
+import Carousel from '../../Carousel/Carousel';
 
-import CarouselData from './Carousel/CarouselData/CarouselData';
+import CarouselData from '../../Carousel/CarouselData/CarouselData';
 
 function Homepage() {
   return (

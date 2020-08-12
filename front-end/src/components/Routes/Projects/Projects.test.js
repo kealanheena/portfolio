@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Projects from './Projects';
-import Carousel from './Carousel/Carousel';
+import Carousel from '../../Carousel/Carousel';
 
 
 describe('Projects', () => {
