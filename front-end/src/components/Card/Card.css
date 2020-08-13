@@ -1,0 +1,17 @@
+.card-img {
+  width: 100%;
+  display: block;
+  border-top: 5px;
+}
+
+.content-container {
+  padding: 5px 15px;
+}
+
+.content-container h4 {
+  font-size: 1rem;
+}
+
+.content-container p {
+  font-size: 0.9rem;
+}
