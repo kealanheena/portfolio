@@ -24,11 +24,16 @@ p {
 
 .inactive {
   display: none;
-  animation: active 5s;
 }
 
 .active {
   display: block;
+  width: 75%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.1);
   animation: active 5s;
 }
 
@@ -60,7 +65,7 @@ p {
   align-items: center;
   text-align: center;
   width: 100%;
-  padding: 100px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
 }
 
 .slider-items {
@@ -71,7 +76,7 @@ p {
 }
 
 .slider-img {
-  width: 60%;
+  width: 100%;
 }
 
 .slider-text {
@@ -79,12 +84,25 @@ p {
 }
 
 .slider-text p {
-  width: 75%;
+  width: 100%;
   margin: auto;
 }
 
+.slider-btn {
+  color: rgb(70, 70, 70);
+  /* : left; */
+  font-size: 2rem;
+  margin: 10px;
+  text-decoration: none; 
+}
+
+.slider-btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
 .slider-text section {
-  height: 450px;
+  height: 600px;
   padding: 20px 0;
 }
 

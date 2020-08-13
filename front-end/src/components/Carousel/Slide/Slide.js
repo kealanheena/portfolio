@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 class Slide extends Component {
   constructor(props) {
     super(props);
 
     this.state ={ landing: this.props.data }
+  }
+
+  wordCount(paragraph, count) {
+    if(paragraph.split(' ').length <= count) {
+      return paragraph;
+    } else {
+      return `${paragraph.split(' ').slice(0, 25).join(' ')}...`;
+    }
+  }
+
+  displayProjectsWeeks(project, index) {
+    if(project.makers) {
+      return `Week ${index+1}: ${project.title}`;
+    } else {
+      return project.title;
+    }
   }
 
   render() {
@@ -20,17 +39,15 @@ class Slide extends Component {
                 index === this.props.activeIndex  ? 'active' : 'inactive'
               }>
                 <img className="slider-img" src={s.img} alt={s.title}/>
-                <h1>{s.title}</h1>
-                <p>
-                  {
-                    s.description.split(' ').length <= 25 ?  s.description : `${s.description.split(' ').slice(0, 25).join(' ')}...`
-                  }
-                </p>
+                <h3>{ this.displayProjectsWeeks(s, index) }</h3>
+                <p> { this.wordCount(s.description, 25) } </p>
+                <a className="slider-btn">
+                  <FontAwesomeIcon icon={faGithub}/>
+                </a>
               </div>
               <div className={ 
                 index === this.props.activeIndex ? 'index' : 'inactive'
               }>
-                <em>{`${index + 1}/${landing.length}`}</em>
               </div>
             </div>
           )
