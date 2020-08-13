@@ -18,11 +18,17 @@ code {
 }
 
 h3 {
-  font-size: 1.25rem;
-}
+  font-size: 1.35rem;
+} 
 
 .spacing {
   margin: 3.5rem 0;
+}
+
+.spacing h2,
+.spacing h3{
+  margin: 3.5rem 0;
+  text-align: center;
 }
 
 .container {

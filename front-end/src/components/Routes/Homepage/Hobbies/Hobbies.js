@@ -8,7 +8,7 @@ import './Hobbies.css'
 function Hobbies() {
   return(
     <div className="spacing">
-      <h3>Hobbies</h3>
+      <h2>Hobbies</h2>
       <div className="hobbies-container">
         {HobbiesData.map( hobby  =>
           <div key={hobby.id} className="card-container">

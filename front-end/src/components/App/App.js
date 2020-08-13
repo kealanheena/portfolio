@@ -41,7 +41,6 @@ class App extends Component {
           <main style={{marginTop: '64px'}}>
             <Switch>
               <Route path="/" exact component={Homepage}/>
-              {/* <Route path="/contact" exact component={<div/>}/> */}
             </Switch>
           </main>
         </div>

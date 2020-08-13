@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 
 class Slide extends Component {
   constructor(props) {
     super(props);
 
-    this.state ={ landing: this.props.data }
+    this.state ={ projects: this.props.data }
   }
 
-  wordCount(paragraph, count) {
+  getProjectDescription(paragraph, count) {
     if(paragraph.split(' ').length <= count) {
       return paragraph;
     } else {
@@ -18,7 +19,7 @@ class Slide extends Component {
     }
   }
 
-  displayProjectsWeeks(project, index) {
+  getProjectTitle(project, index) {
     if(project.makers) {
       return `Week ${index+1}: ${project.title}`;
     } else {
@@ -26,24 +27,31 @@ class Slide extends Component {
     }
   }
 
+
+
   render() {
 
-    var { landing } = this.state;
+    var { projects } = this.state;
 
     return(
       <section>
         {
-          landing.map((s, index) => 
-            <div key={s.id}>
+          projects.map((project, index) => 
+            <div key={project.id}>
               <div className={ 
                 index === this.props.activeIndex  ? 'active' : 'inactive'
               }>
-                <img className="slider-img" src={s.img} alt={s.title}/>
-                <h3>{ this.displayProjectsWeeks(s, index) }</h3>
-                <p> { this.wordCount(s.description, 25) } </p>
-                <a className="slider-btn">
-                  <FontAwesomeIcon icon={faGithub}/>
-                </a>
+                <img className="slider-img" src={project.img} alt={project.title}/>
+                <h3>{ this.getProjectTitle(project, index) }</h3>
+                <p> { this.getProjectDescription(project.description, 25) } </p>
+                <div className="slider-btn-container">
+                  <a href={project.github} className="slider-btn">
+                    <FontAwesomeIcon icon={faGithub}/>
+                  </a>
+                  <a href={project.website} className="slider-btn">
+                    <FontAwesomeIcon icon={faLink}/>
+                  </a>
+                </div>
               </div>
               <div className={ 
                 index === this.props.activeIndex ? 'index' : 'inactive'

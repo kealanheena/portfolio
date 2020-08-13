@@ -30,11 +30,11 @@ p {
   display: block;
   width: 75%;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.1);
-  animation: active 5s;
+  animation: active 2s;
 }
 
 .index {
@@ -63,7 +63,7 @@ p {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   width: 100%;
   padding: 20px 0px 0px 0px;
 }
@@ -81,20 +81,26 @@ p {
 
 .slider-text {
   width: 100%;
+  display: flex;
 }
 
 .slider-text p {
-  width: 100%;
+  width: 90%;
   margin: auto;
 }
 
-.slider-btn {
+a.slider-btn {
   color: rgb(70, 70, 70);
-  /* : left; */
-  font-size: 2rem;
-  margin: 10px;
+  font-size: 2.5rem;
   text-decoration: none; 
+  margin: 10px;
 }
+
+div.slider-btn-container {
+  padding-top: 20px;
+  padding-left: 5%;
+}
+
 
 .slider-btn:hover {
   color: black;
@@ -102,7 +108,6 @@ p {
 }
 
 .slider-text section {
-  height: 600px;
   padding: 20px 0;
 }
 

@@ -17,7 +17,7 @@ function Projects() {
 
   return (
     <div className="spacing">
-      <h3>Projects</h3>
+      <h2>Projects</h2>
       <h3>Makers Projects</h3>
       <Carousel data={makersData}/>
       <h3>Independant Projects</h3>
