@@ -13,3 +13,30 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media (max-width: 1095px) {
+  .card-container {
+    width: 48%;
+  }
+}
+
+@media (max-width: 730px) {
+  .card-container {
+    width: 80%;
+  }
+
+  .hobbies-container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 439px) {
+  .card-container {
+    height: 410px;
+    width: 100%;
+  }
+
+  .hobbies-container {
+    justify-content: space-around;
+  }
+}
