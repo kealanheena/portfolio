@@ -17,4 +17,8 @@ describe('Card', () => {
     expect(wrapper.find('h2').length).toEqual(1)
   });
 
+  it('should render a <p />', () => {
+    expect(wrapper.find('p').length).toEqual(1)
+  });
+
 });
