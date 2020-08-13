@@ -17,6 +17,14 @@ code {
     monospace;
 }
 
+h3 {
+  font-size: 1.25rem;
+}
+
+.spacing {
+  margin: 3.5rem 0;
+}
+
 .container {
   margin: 0 20%;
 }
