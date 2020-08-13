@@ -6,7 +6,6 @@ import SideDrawer from './Navbar/SideDrawer/SideDrawer';
 import Backdrop from './Backdrop/Backdrop';
 
 import Homepage from '../Routes/Homepage/Homepage';
-import Projects from '../Routes/Projects/Projects';
 
 import './App.css';
 
@@ -42,8 +41,7 @@ class App extends Component {
           <main style={{marginTop: '64px'}}>
             <Switch>
               <Route path="/" exact component={Homepage}/>
-              <Route path="/projects" exact component={Projects}/>
-              <Route path="/contact" exact component={Projects}/>
+              {/* <Route path="/contact" exact component={<div/>}/> */}
             </Switch>
           </main>
         </div>
