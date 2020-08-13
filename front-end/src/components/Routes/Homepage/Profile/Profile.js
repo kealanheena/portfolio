@@ -2,7 +2,7 @@ import React from 'react';
 
 function Profile() {
   return(
-    <div className="container">
+    <div>
       <h3>About Me</h3>
       <p>
         I’m Kealan, a Maker’s Academy graduate and a jack of all trades when it comes to work experience most recently coming out of carpentry to pursue a career in Software Development. 

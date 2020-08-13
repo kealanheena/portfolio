@@ -4,7 +4,7 @@ import HobbiesData from './HobbiesData/HobbiesData';
 
 function Hobbies() {
   return(
-    <div className="container">
+    <div>
       <h3>Hobbies</h3>
       {HobbiesData.map( hobby  => 
         <div key={hobby.id}>
