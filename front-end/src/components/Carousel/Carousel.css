@@ -70,8 +70,22 @@ p {
   align-items: center;
 }
 
+.slider-img {
+  width: 60%;
+}
+
 .slider-text {
-  width: 800px;
+  width: 100%;
+}
+
+.slider-text p {
+  width: 75%;
+  margin: auto;
+}
+
+.slider-text section {
+  height: 450px;
+  padding: 20px 0;
 }
 
 @media screen and (max-width: 900px) {
