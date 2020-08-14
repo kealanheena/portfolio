@@ -15,8 +15,8 @@ describe('Hobbies', () => {
     expect(wrapper.find('div').length).toEqual(amountOfDivs);
   });
 
-  it('should render a <h3 />', () => {
-    expect(wrapper.find('h3').length).toEqual(1);
+  it('should render a <h2 />', () => {
+    expect(wrapper.find('h2').length).toEqual(1);
   });
 
   it('should render a Card component', () => {

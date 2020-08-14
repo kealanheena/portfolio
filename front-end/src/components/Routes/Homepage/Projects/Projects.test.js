@@ -15,7 +15,7 @@ describe('Projects', () => {
   });
 
   it('should render a <h3 />', () => {
-    expect(wrapper.find('h3').length).toEqual(3);
+    expect(wrapper.find('h3').length).toEqual(2);
   });
 
 
