@@ -4,6 +4,7 @@ import Profile from './Profile/Profile';
 import Projects from './Projects/Projects';
 import Header from './Header/Header';
 import Hobbies from './Hobbies/Hobbies';
+import Skills from './Skills/Skills';
 
 function Homepage() {
   return (
@@ -12,6 +13,7 @@ function Homepage() {
       <div  className="container">
         <Profile/>
         <Projects/>
+        <Skills/>
         <Hobbies/>
       </div>
     </div>
