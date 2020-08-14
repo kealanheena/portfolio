@@ -11,9 +11,10 @@ function Profile() {
         I've also been using backend technologies like Mongo, Express and Node.js.
       </p>
       <p>
-      I liked moving around to keep things interesting which is why I was drawn to software development there's always something new, plenty to learn and more than enough chances to keep my skills sharp. 
+      I liked moving around to keep things interesting and to always be learning something new, which is why I worked a lot of different jobs.
+      I was able to learn a lot through these jobs and improve on my interpersonal skills because I work in a lot of customer facing jobs.
+      Software Development seems to suit me because it's engaging as there's always something new to learn and more than enough chances to keep my skills sharp. 
       There's also a large active community which makes getting help a lot easier.
-      
       </p>
     </div>
   )

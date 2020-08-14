@@ -27,7 +27,13 @@ class Slide extends Component {
     }
   }
 
-
+  getButtonClass(project) {
+    if(project.website) {
+      return 'slider-btn';
+    } else {
+      return 'slider-btn disabled'
+    }
+  }
 
   render() {
 
@@ -48,7 +54,7 @@ class Slide extends Component {
                   <a href={project.github} className="slider-btn">
                     <FontAwesomeIcon icon={faGithub}/>
                   </a>
-                  <a href={project.website} className="slider-btn">
+                  <a href={project.website} className={this.getButtonClass(project)}>
                     <FontAwesomeIcon icon={faLink}/>
                   </a>
                 </div>

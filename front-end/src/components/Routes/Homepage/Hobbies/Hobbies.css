@@ -1,7 +1,7 @@
 .card-container {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  height: 400px;
+  height: 410px;
   width: 32%;
   margin: 8px 0;
   box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,7 @@
 
 @media (max-width: 439px) {
   .card-container {
-    height: 410px;
+    /* height: 410px; */
     width: 100%;
   }
 

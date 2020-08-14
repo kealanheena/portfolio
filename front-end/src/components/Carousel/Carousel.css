@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans');
-
 /* Main CSS */
 
 p {
-  font-family: 'Open Sans', 'Sans-Serif';
   color: #707070;
   font-size: 102%;
 }
@@ -95,6 +92,12 @@ a.slider-btn {
   text-decoration: none; 
   margin: 10px;
 }
+
+a.slider-btn.disabled {
+  color: rgba(70, 70, 70, 0.5);
+  cursor: not-allowed;
+}
+
 
 div.slider-btn-container {
   padding-top: 20px;
