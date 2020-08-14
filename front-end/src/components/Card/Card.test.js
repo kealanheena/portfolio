@@ -7,7 +7,7 @@ import Card from './Card';
 describe('Card', () => {
   let wrapper;
 
-  beforeEach(() => wrapper = shallow(<Card/>));
+  beforeEach(() => wrapper = shallow(<Card img={'test_url'}/>));
 
   it('should render a <div />', () => {
     expect(wrapper.find('div').length).toEqual(2)
@@ -15,6 +15,11 @@ describe('Card', () => {
 
   it('should render a <img />', () => {
     expect(wrapper.find('img').length).toEqual(1)
+  });
+
+  it('shouldn\'t render a <img /> if there is no img prop', () => {
+    let wrapper_no_img = shallow(<Card/>);
+    expect(wrapper_no_img.find('img').length).toEqual(0)
   });
 
   it('should render a <h4 />', () => {

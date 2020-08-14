@@ -18,10 +18,10 @@ describe('SideDrawer', () => {
   });
 
   it('should render 5 <li />\'s', () => {
-    expect(wrapper.find('li').length).toEqual(5);
+    expect(wrapper.find('li').length).toEqual(3);
   });
 
   it('should render 5 <a />\'s', () => {
-    expect(wrapper.find('a').length).toEqual(5);
+    expect(wrapper.find('a').length).toEqual(3);
   });
 });

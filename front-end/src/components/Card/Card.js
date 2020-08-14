@@ -2,14 +2,19 @@ import React from 'react'
 
 import './Card.css'
 
-const Card = ({ id, title, description, img }) => (
-  <div key={id}>
-    <img className="card-img" src={img} alt={title}/>
-    <div className="content-container">
-      <h4>{title}</h4>
-      <p>{description}</p>
+function Card({ id, title, content, img }) {
+
+  let imgTag = img ? <img className="card-img" src={img} alt={title}/> : img;
+
+  return(
+    <div key={id}>
+      {imgTag}
+      <div className="content-container">
+        <h4>{title}</h4>
+        <p>{content}</p>
+      </div>
     </div>
-  </div>
-);
+  )
+  };
 
 export default Card;

@@ -15,7 +15,7 @@ function Hobbies() {
             <Card
               id={hobby.id}
               title={hobby.title}
-              description={hobby.description}
+              content={hobby.description}
               img={hobby.img}
             />
           </div>

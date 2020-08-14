@@ -14,12 +14,12 @@ const navbar = props => (
       <div className="navbar-logo">
         <a href="/">Kealan Heena</a>
       </div>
-      <div className="navbar-navigation-items">
+      {/* <div className="navbar-navigation-items">
         <ul>
           <li><a href="/makers">Makers</a></li>
           <li><a href="/projects">Projects</a></li>
         </ul>
-      </div>
+      </div> */}
       <div className="spacer"/>
       <div className="navbar-navigation-items">
         <ul>
