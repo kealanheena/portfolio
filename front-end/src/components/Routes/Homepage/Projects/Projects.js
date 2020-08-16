@@ -20,7 +20,7 @@ function Projects() {
       <h2>Projects</h2>
       <h3>Makers Projects</h3>
       <Carousel data={makersData}/>
-      <h3>Independant Projects</h3>
+      <h3>Independent Projects</h3>
       <Carousel data={otherData}/>
     </div>
   );

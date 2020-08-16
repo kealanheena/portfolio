@@ -5,9 +5,9 @@ import Card from '../../../Card/Card';
 
 import './Skills.css'
 
-function Skills() {
+function Skills({ data }) {
 
-  function getAllSkills({ data }) {
+  function getAllSkills() {
     let arr = []
     CarouselData.forEach( item => 
       arr = arr.concat(item.stack).sort()
@@ -25,7 +25,7 @@ function Skills() {
             <Card
               id={hobby.id}
               title={hobby.title}
-              content={hobby.description}
+              // content={hobby.description}
             />
           </div>
         )}
