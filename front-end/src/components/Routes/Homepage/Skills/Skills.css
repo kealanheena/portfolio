@@ -1,8 +1,8 @@
-.card-container {
+.skill-card-container {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  height: 410px;
   width: 32%;
+  text-align: center;
   margin: 8px 0;
   box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.1);
 }
@@ -14,20 +14,14 @@
   justify-content: space-between;
 }
 
-@media (min-width: 1650px) {
-  .card-container {
-    height: 440px;
-  }
-}
-
 @media (max-width: 1095px) {
-  .card-container {
+  .skill-card-container {
     width: 48%;
   }
 }
 
 @media (max-width: 730px) {
-  .card-container {
+  .skill-card-container {
     width: 80%;
   }
 
@@ -37,8 +31,7 @@
 }
 
 @media (max-width: 439px) {
-  .card-container {
-    /* height: 410px; */
+  .skill-card-container {
     width: 100%;
   }
 
