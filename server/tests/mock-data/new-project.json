@@ -2,5 +2,7 @@
   "title": "First Test Project",
   "description": "This is a test project",
   "website": "#",
-  "github": "#"
+  "github": "#",
+  "makers": true,
+  "stack": ["Ruby", "Javascript"]
 }

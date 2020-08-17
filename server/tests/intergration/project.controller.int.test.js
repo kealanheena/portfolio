@@ -4,7 +4,9 @@ const newProject = require("../mock-data/new-project.json")
 
 const endpointUrl = "/projects/";
 const testData = { title: "Make intergration test for put",
-                   description: "This test is updated" }
+                   description: "This test is updated",
+                   makers: true,
+                   stack: ["Ruby", "Javascript"] };
 const nonExistingProjectId = "5ef12ccfa293162e1111ce88"
 
 let firstProject, newProjectId;
@@ -21,6 +23,8 @@ describe(endpointUrl, () => {
       expect(response.body.description).toBe(newProject.description);
       expect(response.body.website).toBe(newProject.website);
       expect(response.body.github).toBe(newProject.github);
+      expect(response.body.makers).toBe(newProject.makers);
+      expect(response.body.stack).toStrictEqual(newProject.stack);
 
       newProjectId = response.body._id;
     });
@@ -28,10 +32,7 @@ describe(endpointUrl, () => {
     it("should return error 500 on malformed data with POST", async () => {
       const response = await request(app)
         .post(endpointUrl)
-        .send({
-          title: "Missing Required Inputs",
-          description: "This is an invalid project"
-        });
+        .send(testData);
   
       expect(response.statusCode).toBe(500);
       expect(response.body).toStrictEqual({
@@ -46,15 +47,17 @@ describe(endpointUrl, () => {
     test(`GET ALL ${endpointUrl}`, async () => {
       const response = await request(app)
         .get(endpointUrl);
+
+      const indexOfProject = response.body.length - 1;
       
       expect(response.statusCode).toBe(200);
       expect(Array.isArray(response.body)).toBeTruthy();
-      expect(response.body[0].title).toBe(newProject.title);
-      expect(response.body[0].description).toBe(newProject.description);
-      expect(response.body[0].website).toBe(newProject.website);
-      expect(response.body[0].github).toBe(newProject.github);
+      expect(response.body[indexOfProject].title).toBe(newProject.title);
+      expect(response.body[indexOfProject].description).toBe(newProject.description);
+      expect(response.body[indexOfProject].website).toBe(newProject.website);
+      expect(response.body[indexOfProject].github).toBe(newProject.github);
 
-      firstProject = response.body[0];
+      firstProject = response.body[indexOfProject];
     });
   });
 

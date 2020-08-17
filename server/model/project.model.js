@@ -16,6 +16,14 @@ const ProjectSchema = new mongoose.Schema({
   github: {
     type: String,
     required: true
+  },
+  makers: {
+    type: Boolean,
+    required: true
+  },
+  stack: {
+    type: Array,
+    required: true
   }
 });
 
