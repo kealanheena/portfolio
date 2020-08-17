@@ -30,10 +30,10 @@ function Skills({ data }) {
 
       <h3>Soft Skill</h3>
       <div className="skills-container">
-        {softSkills.map( (hobby, index)  =>
+        {softSkills.map( (skill, index)  =>
           <div key={index} className="skill-card-container">
             <Card
-              title={hobby}
+              title={skill}
             />
           </div>
         )}
@@ -41,10 +41,10 @@ function Skills({ data }) {
 
       <h3>Technical Skills</h3>
       <div className="skills-container">
-        {technicalSkills.map( (hobby, index)  =>
+        {technicalSkills.map( (skill, index)  =>
           <div key={index} className="skill-card-container">
             <Card
-              title={hobby}
+              title={skill}
             />
           </div>
         )}
