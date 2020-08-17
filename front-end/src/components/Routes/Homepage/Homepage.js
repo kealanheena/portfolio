@@ -6,8 +6,6 @@ import Header from './Header/Header';
 import Hobbies from './Hobbies/Hobbies';
 import Skills from './Skills/Skills';
 
-import PlaceHolderData from '../../Carousel/CarouselData/CarouselData';
-
 class Homepage extends Component {
   constructor(props) {
     super(props);
@@ -18,14 +16,21 @@ class Homepage extends Component {
   }
 
   callAPI() {
-    fetch('http://localhost:3001/projects')
-      .then(res => res.json() )
-      .then(res => {
-        this.setState({ 
-          isLoaded: true,
-          apiResponse: res 
-      })}
-    )
+    if(!this.props.data){
+      fetch('http://localhost:3001/projects')
+        .then(res => res.json() )
+        .then(res => {
+          this.setState({ 
+            isLoaded: true,
+            apiResponse: res 
+        })}
+      )
+    } else {
+      this.setState({
+        isLoaded: true,
+        apiResponse: this.props.data 
+      })
+    }
   }
 
   componentDidMount() {
@@ -33,7 +38,6 @@ class Homepage extends Component {
   }
 
   render() {
-    const scrollContainerStyle = { maxHeight: "450px" };
     var { isLoaded, apiResponse } = this.state;
 
     if(!isLoaded) {
