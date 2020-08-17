@@ -1,6 +1,5 @@
 import React from 'react';
 
-import CarouselData from '../../../Carousel/CarouselData/CarouselData';
 import SoftSkills from './SoftSkills/SoftSkills';
 import Card from '../../../Card/Card';
 
@@ -16,7 +15,7 @@ function Skills({ data }) {
 
   function getAllSkills() {
     let arr = []
-    CarouselData.forEach( item => 
+    data.forEach( item => 
       arr = arr.concat(item.stack).sort()
     )
     return arr;

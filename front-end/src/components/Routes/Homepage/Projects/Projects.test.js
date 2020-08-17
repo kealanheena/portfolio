@@ -8,10 +8,14 @@ import Carousel from '../../../Carousel/Carousel';
 describe('Projects', () => {
   let wrapper;
 
-  beforeEach(() => wrapper = shallow(<Projects/>));
+  beforeEach(() => wrapper = shallow(<Projects data={[]}/>));
 
   it('should render a <div />', () => {
     expect(wrapper.find('div').length).toEqual(1);
+  });
+
+  it('should render a <h2 />', () => {
+    expect(wrapper.find('h2').length).toEqual(1);
   });
 
   it('should render a <h3 />', () => {

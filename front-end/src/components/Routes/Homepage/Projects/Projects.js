@@ -1,18 +1,16 @@
 import React from 'react';
 import Carousel from '../../../Carousel/Carousel';
 
-import CarouselData from '../../../Carousel/CarouselData/CarouselData';
-
-function Projects() {
+function Projects({ data }) {
 
   let makersData, otherData;
 
-  makersData = CarouselData.filter( data => {
-    return data.makers;
+  makersData = data.filter( project => {
+    return project.makers;
   });
 
-  otherData = CarouselData.filter( data => {
-    return !data.makers;
+  otherData = data.filter( project => {
+    return !project.makers;
   });
 
   return (

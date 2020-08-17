@@ -6,14 +6,16 @@ import Header from './Header/Header';
 import Hobbies from './Hobbies/Hobbies';
 import Skills from './Skills/Skills';
 
+import CarouselData from '../../Carousel/CarouselData/CarouselData';
+
 function Homepage() {
   return (
     <div>
       <Header/>
       <div  className="container">
         <Profile/>
-        <Projects/>
-        <Skills/>
+        <Projects data={CarouselData}/>
+        <Skills data={CarouselData}/>
         <Hobbies/>
       </div>
     </div>
