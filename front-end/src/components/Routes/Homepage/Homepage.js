@@ -6,6 +6,8 @@ import Header from './Header/Header';
 import Hobbies from './Hobbies/Hobbies';
 import Skills from './Skills/Skills';
 
+import PlaceHolderData from '../../Carousel/CarouselData/CarouselData';
+
 class Homepage extends Component {
   constructor(props) {
     super(props);
