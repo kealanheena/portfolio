@@ -15,9 +15,6 @@ const sideDrawer = props => {
   return(
     <nav className={drawerClasses}>
       <ul>
-        {/* <li><a href="/makers">Makers</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <hr/> */}
         <li><a href="/contact">Contact Me</a></li>
         <li><a href="https://www.github.com/kealanheena">
           <FontAwesomeIcon icon={faGithub} className="brand"/>Github

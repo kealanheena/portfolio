@@ -8,12 +8,17 @@ describe('CreateProjectPage', () => {
 
   beforeEach(() => wrapper = shallow(<CreateProjectPage data={[]}/>));
 
-  it('should render a <div />', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+  it('should render a <form />', () => {
+    expect(wrapper.find('from').length).toEqual(1);
   });
 
-  it('should render a <h3 />', () => {
-    expect(wrapper.find('h3').length).toEqual(1);
+  it('should render a <label />', () => {
+    expect(wrapper.find('label').length).toEqual(6);
   });
+
+  it('should render a <input />', () => {
+    expect(wrapper.find('input').length).toEqual(7);
+  });
+
 
 });
