@@ -43,7 +43,7 @@ class Slide extends Component {
       <section>
         {
           projects.map((project, index) => 
-            <div key={project.id}>
+            <div key={project._id}>
               <div className={ 
                 index === this.props.activeIndex  ? 'active' : 'inactive'
               }>
