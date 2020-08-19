@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './CreateProjectPage.css'
+
 class CreateProjectPage extends Component {
   constructor(props) {
     super(props);
@@ -51,24 +53,50 @@ class CreateProjectPage extends Component {
   render() {
     return (
       <form className="container" onSubmit={this.handleSubmit}>
-        <label> Title:
-          <input required name="title" checked={this.state.title} onChange={this.handleInputChange} />
-        </label>
-        <label> Description:
-          <input required name="description" value={this.state.description} onChange={this.handleInputChange} />
-        </label>
-        <label> Website:
-          <input name="website" value={this.state.website} onChange={this.handleInputChange} />
-        </label>
-        <label> Github:
-          <input required name="github" value={this.state.github} onChange={this.handleInputChange} />
-        </label>
-        <label> Stack (enter a list of technologies sperated by a space):
-          <input required name="stack" value={this.state.stack} onChange={this.handleInputChange} />
-        </label>
-        <label> Makers:
-          <input name="makers" type="checkbox" checked={this.state.makers} onChange={this.handleInputChange} />
-        </label>
+        <label htmlFor="title">Title</label>
+          <input required
+            id="title"
+            name="title"
+            checked={this.state.title}
+            onChange={this.handleInputChange}
+          />
+        <label htmlFor="description">Description</label>
+          <textarea required 
+            id="description"
+            name="description"
+            value={this.state.description}
+            onChange={this.handleInputChange}
+          />
+        <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            value={this.state.website}
+            onChange={this.handleInputChange}
+          />
+        <label htmlFor="github">Github</label>
+          <input required
+            id="website"
+            name="github"
+            value={this.state.github}
+            onChange={this.handleInputChange}
+          />
+        <label htmlFor="stack">Stack</label>
+        <em>(enter a list of technologies sperated by a space)</em>
+          <input required
+            id="stack"
+            name="stack"
+            value={this.state.stack}
+            onChange={this.handleInputChange}
+          />
+        <label htmlFor="stack">Makers</label>
+          <input
+            id="makers"
+            name="makers"
+            type="checkbox"
+            checked={this.state.makers}
+            onChange={this.handleInputChange}
+          />
         <input type="submit" value="Submit" />
       </form>
     );
