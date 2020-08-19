@@ -38,7 +38,7 @@ class CreateProjectPage extends Component {
       description: this.state.description,
       website: this.state.website === '' ? null : this.state.website,
       github: this.state.github,
-      stack: this.state.stack.split(' '),
+      stack: this.state.stack.split(','),
       makers: this.state.makers
     }
 
@@ -105,7 +105,7 @@ class CreateProjectPage extends Component {
             onChange={this.handleInputChange}
           />
         <label htmlFor="stack">Stack</label>
-        <em>(enter a list of technologies sperated by a space)</em>
+        <em>(enter a list of technologies sperated by a comma)</em>
           <input required
             id="stack"
             name="stack"
