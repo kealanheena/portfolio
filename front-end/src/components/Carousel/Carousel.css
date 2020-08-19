@@ -34,6 +34,12 @@ p {
   animation: active 2s;
 }
 
+.active p a {
+  margin-left: 5px;
+  text-decoration: none;
+  color: rgb(95, 95, 230);
+}
+
 .index {
   display: block;
 }

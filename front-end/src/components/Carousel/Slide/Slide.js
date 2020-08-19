@@ -49,11 +49,14 @@ class Slide extends Component {
               }>
                 <img className="slider-img" src={project.img} alt={project.title}/>
                 <h3>
-                  <a href={`/projects/${project._id}`}>
-                    { this.getProjectTitle(project, index) }
-                  </a>
+                  { this.getProjectTitle(project, index) }
                 </h3>
-                <p> { this.getProjectDescription(project.description, 25) } </p>
+                <p> 
+                  { this.getProjectDescription(project.description, 25) } 
+                  <a href={`/projects/${project._id}`}>
+                    Learn More
+                  </a>
+                </p>
                 <div className="slider-btn-container">
                   <a href={project.github} className="slider-btn">
                     <FontAwesomeIcon icon={faGithub}/>
