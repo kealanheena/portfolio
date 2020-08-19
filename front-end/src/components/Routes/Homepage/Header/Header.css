@@ -61,6 +61,7 @@
 
   .header-container {
     justify-content: space-around;
+    flex-direction: column;
     flex-wrap: wrap;
   }
 
@@ -78,7 +79,7 @@
   }
 
   .header-img {
-    height: 68%;
+    height: 66%;
   }
 }
 
@@ -91,6 +92,7 @@
   .header-container {
     justify-content: space-around;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 
   @keyframes header-text {
@@ -99,14 +101,14 @@
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .header-img {
-    height: 69%;
+    height: 72%;
   }
 }
