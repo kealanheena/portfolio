@@ -1,0 +1,33 @@
+.alert {
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px solid #4CAF50;
+  width: 80%;
+  color: #4CAF50;
+  opacity: 0;
+  animation-name: alert;
+  animation-duration: 10s;
+}
+
+@keyframes alert {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: grey;
+  font-weight: bold;
+  float: right;
+  font-size: 1.5rem;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

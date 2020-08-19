@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Alert from './Alert/Alert';
+
 import './CreateProjectPage.css'
 
 class CreateProjectPage extends Component {
@@ -11,11 +13,13 @@ class CreateProjectPage extends Component {
       website: '',
       github: '',
       stack: '',
-      makers: false
+      makers: false,
+      confirmation: ''
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleAlert = this.handleAlert.bind(this);
   }
 
   handleInputChange(event) {
@@ -48,16 +52,35 @@ class CreateProjectPage extends Component {
     
     event.preventDefault();
     fetch('http://localhost:3001/projects', options);
+
+    this.setState({
+      title: '',
+      description: '',
+      website: '',
+      github: '',
+      stack: '',
+      makers: false,
+      confirmation: <Alert handleClick={this.handleAlert}/>
+    });
+
+    setTimeout(this.handleAlert, 10000)
+  }
+
+  handleAlert() {
+    this.setState({
+      confirmation: ''
+    });
   }
 
   render() {
     return (
       <form className="container" onSubmit={this.handleSubmit}>
+        {this.state.confirmation}
         <label htmlFor="title">Title</label>
           <input required
             id="title"
             name="title"
-            checked={this.state.title}
+            value={this.state.title}
             onChange={this.handleInputChange}
           />
         <label htmlFor="description">Description</label>

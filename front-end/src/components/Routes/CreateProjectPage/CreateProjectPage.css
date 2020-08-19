@@ -2,7 +2,6 @@ form.container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* justify-content: space-evenly; */
 }
 
 .container label {
@@ -22,10 +21,12 @@ form.container {
   width: 40%;
   max-width: 40%;
   min-width: 40%;
-  height: 100px;
+  min-height: 150px;
+  height: 150px;
   margin: auto;
   padding: 10px;
-  font-size: 1.25rem;
+  font-family: inherit;
+  font-size: 0.9rem;
 }
 
 .container input[type='checkbox'] {
