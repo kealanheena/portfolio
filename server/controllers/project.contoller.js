@@ -2,7 +2,16 @@ const ProjectModel = require("../model/project.model");
 
 exports.createProject = async (req, res, next) => {
   try {
-    const createdModel = await ProjectModel.create(req.body);
+    console.log(req.file)
+    const createdModel = await ProjectModel.create({
+      title: req.body.title,
+      description:req.body.description,
+      website: req.body.website,
+      github: req.body.github,
+      makers: req.body.makers,
+      stack: req.body.stack,
+      projectImage: req.file.path
+    });
     res.status(201).json(createdModel);
   } catch (err) {
     next(err);

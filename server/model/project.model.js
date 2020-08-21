@@ -24,6 +24,10 @@ const ProjectSchema = new mongoose.Schema({
   stack: {
     type: Array,
     required: true
+  },
+  projectImage: {
+    type: String,
+    required: true
   }
 });
 
