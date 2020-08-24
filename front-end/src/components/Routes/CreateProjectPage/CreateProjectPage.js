@@ -14,19 +14,29 @@ class CreateProjectPage extends Component {
       github: '',
       stack: '',
       makers: false,
+      projectImage: null,
       confirmation: ''
     };
 
+    this.onImageUpload = this.onImageUpload.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleAlert = this.handleAlert.bind(this);
   }
 
+  onImageUpload(event) {
+    console.log(event.target.files[0])
+    this.setState({
+      projectImage: event.target.files
+    })
+  }
+
+
   handleInputChange(event) {
     const target = event.target;
     const value = target.name === 'makers' ? target.checked : target.value;
     const name = target.name;
-
+    
     this.setState({
       [name]: value
     });
@@ -39,7 +49,8 @@ class CreateProjectPage extends Component {
       website: this.state.website === '' ? null : this.state.website,
       github: this.state.github,
       stack: this.state.stack.split(','),
-      makers: this.state.makers
+      makers: this.state.makers,
+      projectImage: this.state.projectImage
     }
 
     const options = {
@@ -60,6 +71,7 @@ class CreateProjectPage extends Component {
       github: '',
       stack: '',
       makers: false,
+
       confirmation: <Alert handleClick={this.handleAlert}/>
     });
 
@@ -111,6 +123,15 @@ class CreateProjectPage extends Component {
             name="stack"
             value={this.state.stack}
             onChange={this.handleInputChange}
+          />
+        <label htmlFor="file">Image</label>
+        <em>(please use a JPEG or PNG)</em>
+          <input required
+            type="file"
+            id="file"
+            name="image"
+            accept="image/*"
+            onChange={this.onImageUpload}
           />
         <label htmlFor="stack">Makers</label>
           <input

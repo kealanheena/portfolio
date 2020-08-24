@@ -47,7 +47,7 @@ class Slide extends Component {
               <div className={ 
                 index === this.props.activeIndex  ? 'active' : 'inactive'
               }>
-                <img className="slider-img" src={project.img} alt={project.title}/>
+                <img className="slider-img" src={`http://localhost:3001/${project.projectImage}`} alt={project.title}/>
                 <h3>
                   { this.getProjectTitle(project, index) }
                 </h3>
