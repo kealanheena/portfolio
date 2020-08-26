@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import './ProjectsPage.css'
+
 function ProjectsPage({ match }) {
   useEffect(() => {
     fetchItem();
@@ -16,11 +18,14 @@ function ProjectsPage({ match }) {
     setProject(project);
   };
 
-
   return (
-    <div className="container">
+    <div className="container projects-page-container">
       <h1>{project.title}</h1>
-      <img src={project.img} alt={project.title}/>
+      <img
+        className="project-image"
+        src={`http://localhost:3001/${project.projectImage}`}
+        alt={project.title}
+      />
       <p>{project.description}</p>
     </div>
   )
