@@ -7,13 +7,10 @@
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
-.projects-page-container {
-  align-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.projects-page-container h1 {
+  text-align: center;
 }
 
-.projects-page-container h1 {
-  align-content: center;
+.projects-page-container p {
+  text-align: center;
 }
