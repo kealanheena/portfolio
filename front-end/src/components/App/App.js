@@ -7,7 +7,8 @@ import Backdrop from './Backdrop/Backdrop';
 
 import Homepage from '../Routes/Homepage/Homepage';
 import ProjectsPage from '../Routes/ProjectsPage/ProjectsPage';
-import CreateProjectPage from '../Routes/CreateProjectPage/CreateProjectPage';
+import ContactMe from '../Routes/ContactMe/ContactMe';
+// import CreateProjectPage from '../Routes/CreateProjectPage/CreateProjectPage';
 
 import './App.css';
 
@@ -44,6 +45,7 @@ class App extends Component {
             <Switch>
               <Route path="/" exact component={Homepage}/>
               <Route path="/projects/:id" exact component={ProjectsPage}/>
+              <Route path="/contact" exact component={ContactMe}/>
               {/* <Route path="/create-project" exact component={CreateProjectPage}/> */}
             </Switch>
           </main>

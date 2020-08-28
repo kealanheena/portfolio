@@ -20,6 +20,7 @@ app.use((err, req, res, next) => {
 });
 
 app.post('/email', (req, res) => {
+  console.log('Message Recieved')
   res.json({ message: "Message Recieved" });
 });
 
