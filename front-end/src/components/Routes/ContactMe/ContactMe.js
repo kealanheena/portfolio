@@ -6,7 +6,6 @@ class ContactMe extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      confirmation: '',
       email: '',
       subject: '',
       text: ''
@@ -28,44 +27,41 @@ class ContactMe extends Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
+
     const data = {
       email: this.state.email,
       subject: this.state.subject,
       text: this.state.text
     }
 
-    const options = {
+    fetch('http://localhost:3001/email', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data)
-    }
-    
-    event.preventDefault();
-    fetch('http://localhost:3001/email', options);
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+    console.log(data);
 
     this.setState({
       email: '',
       subject: '',
       text: '',
-
-      // confirmation: <Alert handleClick={this.handleAlert}/>
     });
-
-    // setTimeout(this.handleAlert, 10000)
   }
-
-  // handleAlert() {
-  //   this.setState({
-  //     confirmation: ''
-  //   });
-  // }
 
   render() {
     return (
       <form className="container" onSubmit={this.handleSubmit}>
-        {/* {this.state.confirmation} */}
         <label htmlFor="email">Email</label>
           <input
             id="email"
