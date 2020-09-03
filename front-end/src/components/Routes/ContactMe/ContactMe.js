@@ -46,9 +46,9 @@ class ContactMe extends Component {
     fetch('http://localhost:3001/email', options);
 
     this.setState({
-      email: this.state.email,
-      subject: this.state.subject,
-      text: this.state.text,
+      email: '',
+      subject: '',
+      text: '',
 
       // confirmation: <Alert handleClick={this.handleAlert}/>
     });
