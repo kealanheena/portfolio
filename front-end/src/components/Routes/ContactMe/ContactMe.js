@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import './ContactMe.css'
 
@@ -15,72 +16,58 @@ class ContactMe extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-    
-    this.setState({
-      [name]: value
-    });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-
-    const data = {
-      email: this.state.email,
-      subject: this.state.subject,
-      text: this.state.text
-    }
-
-    fetch('http://localhost:3001/email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-
-    console.log(data);
-
+  clearInput = () => {
     this.setState({
       email: '',
       subject: '',
-      text: '',
+      text: ''
+    })
+  }
+
+  handleInputChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
     });
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.state);
+    axios.post('http://localhost:3001/email', this.state)
+      .then( response => {
+        JSON.stringify(response);
+      })
+      .catch( err => {
+        console.log(err);
+      });
+    this.clearInput()
+  }
+
   render() {
+
+    const { email, subject, text } = this.state
+
     return (
       <form className="container" onSubmit={this.handleSubmit}>
         <label htmlFor="email">Email</label>
           <input
             id="email"
             name="email"
-            value={this.state.email}
+            value={email}
             onChange={this.handleInputChange}
           />
         <label htmlFor="subject">Subject</label>
           <input
             id="subject"
             name="subject"
-            value={this.state.subject}
+            value={subject}
             onChange={this.handleInputChange}
           />
         <label htmlFor="text">Text</label>
           <textarea
             id="text"
             name="text"
-            value={this.state.text}
+            value={text}
             onChange={this.handleInputChange}
           />
         <input type="submit" value="Submit" />
