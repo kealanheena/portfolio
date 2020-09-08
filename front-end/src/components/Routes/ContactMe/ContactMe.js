@@ -53,6 +53,7 @@ class ContactMe extends Component {
           <input
             id="email"
             name="email"
+            placeholder="email"
             value={email}
             onChange={this.handleInputChange}
           />
@@ -60,6 +61,7 @@ class ContactMe extends Component {
           <input
             id="subject"
             name="subject"
+            placeholder="subject"
             value={subject}
             onChange={this.handleInputChange}
           />
@@ -67,6 +69,7 @@ class ContactMe extends Component {
           <textarea
             id="text"
             name="text"
+            placeholder="hey Kealan, loved your portfolio . . ."
             value={text}
             onChange={this.handleInputChange}
           />
