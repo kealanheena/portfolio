@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 const express = require("express");
 const projectRoutes = require("./routes/project.routes");
 const emailRoutes = require("./routes/email.routes");
 const app = express();
 const mongodb = require("./mongodb/mongodb.connect");
-const cors = require("cors")
+const cors = require("cors");
 
 mongodb.connect();
 
