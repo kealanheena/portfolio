@@ -12,17 +12,21 @@ const auth = {
 
 const transporter = nodemailer.createTransport(mailGun(auth));
 
-const mailOptions = {
-  from: process.env.EMAIL,
-  to: process.env.EMAIL,
-  subject: 'test',
-  text: 'testing'
+const sendMail = (email, subject, text, cb) => {
+  const mailOptions = {
+    from: email,
+    to: process.env.EMAIL,
+    subject: subject,
+    text: text
+  }
+  
+  transporter.sendMail(mailOptions, (err, data) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, data);
+    }
+  });
 }
 
-transporter.sendMail(mailOptions, (err, data) => {
-  if (err) {
-    console.log(`Error: ${err}`);
-  } else {
-    console.log('Message Sent');
-  }
-});
+module.exports = sendMail;

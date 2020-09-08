@@ -1,4 +1,13 @@
+const sendMail = require('../mail');
+
 exports.send = (req, res, next) => {
-  res.json(req.body);
-  console.log(`Data: \n${req.body.email}\n${req.body.subject}\n${req.body.text}`);
+  const { subject, email, text } =  req.body;
+
+  sendMail(email, subject, text, function(err, data) {
+    if (err) {
+      res.status(500).json({ message: "Internal Error" })
+    } else {
+      res.json({ message: "Email Sent!" })
+    }
+  });
 };
